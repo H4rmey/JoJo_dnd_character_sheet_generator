@@ -1,0 +1,407 @@
+stands:
+- name: "Power"
+  description: "Power Stands are considered to be some of the most dangerous and powerful, due to their all around physical ability. Most opponents have no chance facing off against a Power type Stand user when within their spe. Their only weakness is their extremely short spe."
+  attack_dice: "1d12"
+  attack_dice_higher_level: "2d10"
+  hit_dice: "1d12" 
+  on_level_up: "2d4"
+  note: ""
+  special:
+    - 10
+    - 100
+    - 250
+    - 500
+  modification_chart: 
+    str: 4
+    dex: 3
+    con: 3
+    itl: 1
+    wis: 4
+    cha: 2
+  levels:
+    - "1;2;2;Feat_of_Power;1dx"
+    - "2;2;2;Custom_Ability;1dx"
+    - "3;2;2;Ability_Score_Improvement;2dx"
+    - "4;2;2;Armored_Stand|Melee_Barrage|Detached_Senses;2dx"
+    - "5;3;2;Stand_Rush;3dx"
+    - "6;3;3;choose=4&Ability_Score_Improvement;3dx"
+    - "7;3;3;Counterattacking_Blow|Offensive_Blow;4dx"
+    - "8;3;3;Ability_Score_Improvement;4dx"
+    - "9;4;3;Block_Physical_Projectile|Block_Stand_Projectile;5dx"
+    - "10;4;3;Ability_Score_Improvement;5dx"
+    - "11;4;4;attack_dice_to=2d10;6dx"
+    - "12;4;4;Stand_Leap;6dx"
+    - "13;5;4;Ability_Score_Improvement;7dx"
+    - "14;5;4;choose=4|7|9&Menacing_Aura;7dx"
+    - "15;5;4;The_Requiem_Quietly_Plays&Special_Ability_(2_SE);8dx"
+    - "16;5;5;-;8dx"
+    - "17;6;5;-;9dx"
+    - "18;6;5;-;9dx"
+    - "19;6;5;-;10dx"
+    - "20;6;6;Heaven_Calls;10dx"
+  abilities:
+    - "Anchored_Stand"
+    - "Block_Physical_Projectile"
+    - "Block_Stand_Projectile"
+    - "Counterattacking_Blow"
+    - "Detached_Senses"
+    - "Feat_of_Power"
+    - "Melee_Barrage"
+    - "Stand_Leap"
+    - "Stand_Rush"
+    - "Offensive_Blow"
+- name: "Ranged"
+  description: "Ranged Stands are fantastic Stands all around. While not as strong or tough as Power types, Ranged Stands are able to use their versatility and flexibility to their advantage, oen being able to effectively fight in almost any situation. A Stand type with no great strengths, but no great weaknesses either."
+  attack_dice: "1d6"
+  attack_dice_past_level_eleven: "2d10"
+  hit_dice: "1d12" 
+  on_level_up: "2d4"
+  note: ""
+  special:
+    - 10
+    - 100
+    - 250
+    - 500
+  modification_chart: 
+    str: 4
+    dex: 3
+    con: 3
+    itl: 1
+    wis: 4
+    cha: 2
+  levels:
+    - "1;2;2;Slippery&Detached_Senses|Armored_Stand;1dx"
+    - "2;2;2;Custom_Ability;1dx"
+    - "3;2;2;Ability_Score_Improvement;2dx"
+    - "4;2;2;Melee_Barrage|Ranged_Attack;2dx"
+    - "5;3;2;Oblivious_Facade|feat=Clever_Disguise;3dx"
+    - "6;3;3;Ability_Score_Improvement;3dx"
+    - "7;3;3;Silent_Movement|Speedy_Movement;4dx"
+    - "8;3;3;choose=4|5|7&Ability_Score_Improvement;4dx"
+    - "9;4;3;Pincer_Attack|Hot_Pursuit;5dx"
+    - "10;4;3;Ability_Score_Improvement;5dx"
+    - "11;4;4;attack_dice_inc=1d10;6dx"
+    - "12;4;4;choose=4|5|7|9;6dx"
+    - "13;5;4;Ability_Score_Improvement;7dx"
+    - "14;5;4;Stand_Pickpocketing|Menacing_Aura;7dx"
+    - "15;5;4;The_Requiem_Quietly_Plays&Special_Ability_(2_SE);8dx"
+    - "16;5;5;-;8dx"
+    - "17;6;5;-;9dx"
+    - "18;6;5;-;9dx"
+    - "19;6;5;-;10dx"
+    - "20;6;6;Heaven_Calls;10dx"
+  abilities:
+    - "Armored_Stand"
+    - "Detached_Senses"
+    - "Hot_Pursuit"
+    - "Melee_Barrage"
+    - "Oblivious_Facade"
+    - "Pincer_Attack"
+    - "Ranged_Attack"
+    - "Silent_Movement"
+    - "Slippery"
+    - "Speedy_Movement"
+    - "Stand_Pickpocketing"
+- name: "Remote"
+  description: "Remote-Type Stands are immensely powerful. Their Abilities and strength can often not be ignored. However, the users of these Stands often cannot control them, with their Stands instead automatically following a simple task. For example, attack the closest human until its breathing stops for 5 seconds, prevent anybody from entering a building, use your ability on anyone who opens a door, attack anyone who steps into a shadow, etc. These Stands, while often powerful indeed, have very easily exploitable weaknesses due to the simple nature of how they function."
+  attack_dice: "1d8"
+  attack_dice_past_level_eleven: "2d8"
+  hit_dice: "1d10" 
+  on_level_up: "2d4"
+  note: ""
+  special:
+    - 10
+    - 100
+    - 250
+    - 500
+  modification_chart: 
+    str: 3
+    dex: 2
+    con: 4
+    itl: 5
+    wis: 3
+    cha: 2
+  levels:
+    - "1;2;2;Programmed_Stand&Stand_Marking;1dx"
+    - "2;2;2;Custom_Ability&Immense_Range|Immense_Power;1dx"
+    - "3;2;2;Ability_Score_Improvement;2dx"
+    - "4;2;2;Detached_Stand|Detached_Senses;2dx"
+    - "5;3;2;feat=Simple_Weapon_Proficiency|Martial_Weapon_Proficiency|feat=Pistol_Proficiency|feat=Rifle_Proficiency|feat=Tavern_Brawler;3dx"
+    - "6;3;3;Ability_Score_Improvement;3dx"
+    - "7;3;3;Remote_Grappler|Self-Preservation;4dx"
+    - "8;3;3;Ability_Score_Improvement;4dx"
+    - "9;4;3;Two_Modes|feat=Tanky|feat=Scarflesh;5dx"
+    - "10;4;3;Ability_Score_Improvement;5dx"
+    - "11;4;4;attack_dice_inc=2d8;6dx"
+    - "12;4;4;Oblivious_Facade|feat=Close_Combat_Specialist;6dx"
+    - "13;5;4;Ability_Score_Improvement;7dx"
+    - "14;5;4;choose=1|4|5|7|12;7dx"
+    - "15;5;4;The_Requiem_Quietly_Plays&Special_Ability_(2_SE);8dx"
+    - "16;5;5;-;8dx"
+    - "17;6;5;-;9dx"
+    - "18;6;5;-;9dx"
+    - "19;6;5;-;10dx"
+    - "20;6;6;Heaven_Calls;10dx"
+  abilities:
+    - "Detached_Senses"
+    - "Detached_Stand"
+    - "Immense_Power"
+    - "Immense_Range"
+    - "Oblivious_Facade"
+    - "Programmed_Stand"
+    - "Remote_Grappler"
+    - "Self-Preservation"
+    - "Stand_Marking"
+    - "Two_Modes"
+- name: "Ability"
+  description: "Many Stands are able to physically manifest themselves clearly and powerfully, but most Ability-Type Stands do not function in the same way. Some Ability Stands are not visible or tangible unless specifically made so by their user. While these Stands have very little in the way of physical power, their masterful use of their Abilities are able to make them more than handy in the fight. "
+  attack_dice: "1d4"
+  attack_dice_past_level_eleven: "1d6"
+  hit_dice: "1d6" 
+  on_level_up: "2d4"
+  note: ""
+  special:
+    - 10
+    - 100
+    - 250
+    - 500
+  modification_chart: 
+    str: 1
+    dex: 3
+    con: 1
+    itl: 4
+    wis: 3
+    cha: 5
+  levels:
+    - "1;2;2;Custom_Ability&Slippery;1dx"
+    - "2;2;2;Self-Acclimation;1dx"
+    - "3;2;2;Ability_Score_Improvement;2dx"
+    - "4;2;2;feat=Simple_Weapon_Proficiency|Martial_Weapon_Proficiency|feat=Unarmed_Proficiency|feat=Close_Combat_Specialist|feat=Pistol_Proficiency|feat=Rifle_Proficiency;2dx"
+    - "5;3;2;Ranged_Attack|Stand_Energy_Recharge|Detached_Senses|feat=Energy_Imbuement;3dx"
+    - "6;3;3;Ability_Score_Improvement;3dx"
+    - "7;3;3;Powerful_Flex&Defensive_Ability|Mobile_Ability;4dx"
+    - "8;3;3;Ability_Score_Improvement;4dx"
+    - "9;4;3;special_ability;5dx"
+    - "10;4;3;Ability_Score_Improvement;5dx"
+    - "11;4;4;choose=4|5|7&attack_dice_inc=1d6;6dx"
+    - "12;4;4;Energy_Conservation;6dx"
+    - "13;5;4;Ability_Score_Improvement;7dx"
+    - "14;5;4;-;7dx"
+    - "15;5;4;The_Requiem_Quietly_Plays&Ultimate_Stand_Ability;8dx"
+    - "16;5;5;-;8dx"
+    - "17;6;5;-;9dx"
+    - "18;6;5;-;9dx"
+    - "19;6;5;-;10dx"
+    - "20;6;6;Heaven_Calls;10dx"
+  abilities:
+    - "Defensive_Ability"
+    - "Detached_Senses"
+    - "Energy_Conservation"
+    - "Mobile_Ability"
+    - "Powerful_Flex"
+    - "Ranged_Attack"
+    - "Self-Acclimation"
+    - "Slippery"
+    - "Stand_Energy_Recharge"
+- name: "Enhancement"
+  description: "Many Stands are able to physically manifest themselves or their abilities in a vacuum. However, there are some Stands that are able to forgo many of the normal Stand rules and make a normal, everyday object into something much more terrifying. While these Stands have incredible power, they also possess properties and limitations unique to them, and them alone. "
+  attack_dice: "1d10"
+  attack_dice_past_level_eleven: "2d8"
+  hit_dice: "1d10" 
+  on_level_up: "2d4"
+  note: "Note: Enhancement-Type Stands are powerful, but all damage types are able to harm them, not just Stand damage types."
+  special:
+    - 10
+    - 100
+    - 250
+    - 500
+  modification_chart: 
+    str: 3
+    dex: 3
+    con: 5
+    itl: 5
+    wis: 3
+    cha: 3
+  levels:
+    - "1;2;2;Anchored_Stand&Immense_Resistance;1dx"
+    - "2;2;2;Custom_Ability;1dx"
+    - "3;2;2;Ability_Score_Improvement;2dx"
+    - "4;2;2;Detached_Senses;2dx"
+    - "5;3;2;Complete_Control|Armored_Stand|Immense_Range;3dx"
+    - "6;3;3;Ability_Score_Improvement;3dx"
+    - "7;3;3;Oblivious_Facade|Stand_Marking;4dx"
+    - "8;3;3;Ability_Score_Improvement;4dx"
+    - "9;4;3;Camouflage;5dx"
+    - "10;4;3;Ability_Score_Improvement;5dx"
+    - "11;4;4;attack_dice_inc=2d8;6dx"
+    - "12;4;4;General_Anchors|Speedy_Switch;6dx"
+    - "13;5;4;Ability_Score_Improvement;7dx"
+    - "14;5;4;choose=5|7|12;7dx"
+    - "15;5;4;The_Requiem_Quietly_Plays&Special_Ability_(2_SE);8dx"
+    - "16;5;5;-;8dx"
+    - "17;6;5;-;9dx"
+    - "18;6;5;-;9dx"
+    - "19;6;5;-;10dx"
+    - "20;6;6;Heaven_Calls;10dx"
+  abilities:
+    - "Anchored_Stand"	
+    - "Armored_Stand"	
+    - "Camouflage"	
+    - "Complete_Control"	
+    - "Detached_Senses"	
+    - "General_Anchors"	
+    - "Immense_Range"	
+    - "Immense_Resistance"	
+    - "Oblivious_Facade"	
+    - "Speedy_Switch"	
+    - "Stand_Marking"	
+- name: "Revenge"
+  description: "Some Stands have immense power but are unable to properly function unless their user feels a certain way. Through feelings of hatred, pain, or loss, certain Stands may manifest properly, showing their true form and relentlessly attacking those who wronged their users."
+  attack_dice: "1d12"
+  attack_dice_past_level_eleven: "2d10"
+  hit_dice: "1d12" 
+  on_level_up: "3d4"
+  note: "Note: You cannot activate a Revenge-Type Stand by yourself. Instead, you must take an amount of damage greater than or equal to your Level in order to summon your Stand. This damage may be dealt over time, or in one hit. After you take that initial damage, you can summon it or dispell it at will for an amount of minutes equal to your Level. The damage can be inflicted by yourself or something that another person/thing does to you."
+  special:
+    - 10
+    - 100
+    - 250
+    - 500
+  modification_chart: 
+    str: 3
+    dex: 4
+    con: 4
+    itl: 7
+    wis: 3
+    cha: 2
+  levels:
+    - "1;2;2;Detached_Senses&Feat_of_Power;1dx"
+    - "2;2;2;Custom_Ability&Stand_Marking;1dx"
+    - "3;2;2;Ability_Score_Improvement;2dx"
+    - "4;2;2;Scarflesh;2dx"
+    - "5;3;2;Oblivious_Facade|Menacing_Aura;3dx"
+    - "6;3;3;Ability_Score_Improvement;3dx"
+    - "7;3;3;Armored_Stand|feat=Catlike_Agility;4dx"
+    - "8;3;3;Ability_Score_Improvement;4dx"
+    - "9;4;3;Near-Death_Escape;5dx"
+    - "10;4;3;Ability_Score_Improvement;5dx"
+    - "11;4;4;attack_dice_inc=2d10;6dx"
+    - "12;4;4;Second_Life|Unconscious_Control|Immense_Range;6dx"
+    - "13;5;4;Ability_Score_Improvement;7dx"
+    - "14;5;4;choose=5|7|12;7dx"
+    - "15;5;4;The_Requiem_Quietly_Plays&Special_Ability_(3_SE);8dx"
+    - "16;5;5;-;8dx"
+    - "17;6;5;-;9dx"
+    - "18;6;5;-;9dx"
+    - "19;6;5;-;10dx"
+    - "20;6;6;Heaven_Calls;10dx"
+  abilities:
+    - "Armored_Stand"
+    - "Detached_Senses"
+    - "Feat_of_Power"
+    - "Immense_Range"
+    - "Near-Death_Escape"
+    - "Oblivious_Facade"
+    - "Second_Life"
+    - "Stand_Marking"
+    - "Unconscious_Control"
+- name: "Independent"
+  description: "Independent-Type Stands are quite interesting, and are one of the more rare Stand Types in JoJo's Bizarre Adventure. These Stands are odd because they do not actually have a User, instead in control of themselves. They have the same sort of Attributes that regular Stands do and must follow most of the same rules. However, the Stand is still made up of physical matter, and thus is similar to an Enhancement type Stand in that they can be damaged physically by Non-Stand damage types."
+  attack_dice: "1d8"
+  attack_dice_past_level_eleven: "2d6"
+  hit_dice: "1d10" 
+  on_level_up: "2d4"
+  note: "Note: Some Independent Stands did in fact have a user at some point, or might even still have a user. Tthey are not linked together though, as damaging the Stand does no harm to the User and vice versa. However, if a person does or did have an Independent-Type Stand they are still able to sense Stands and Ghosts, just like a normal Stand User would."
+  special:
+    - 10
+    - 100
+    - 250
+    - 500
+  modification_chart: 
+    str: 3
+    dex: 3
+    con: 4
+    itl: 0
+    wis: 3
+    cha: 3
+  levels:
+    - "1;2;2;Immense_Resistance&Anchored_Stand;1dx"
+    - "2;2;2;Custom_Ability;1dx"
+    - "3;2;2;Ability_Score_Improvement;2dx"
+    - "4;2;2;Ranged_Attack|Self-Repair;2dx"
+    - "5;3;2;Melee_Barrage|Armored_Stand;3dx"
+    - "6;3;3;Ability_Score_Improvement;3dx"
+    - "7;3;3;choose=4|5;4dx"
+    - "8;3;3;Ability_Score_Improvement;4dx"
+    - "9;4;3;Oblivious_Facade;5dx"
+    - "10;4;3;Ability_Score_Improvement;5dx"
+    - "11;4;4;attack_dice_inc=2d6;6dx"
+    - "12;4;4;Defensive_Ability|Mobile_Ability;6dx"
+    - "13;5;4;Ability_Score_Improvement;7dx"
+    - "14;5;4;Stand_Rush;7dx"
+    - "15;5;4;The_Requiem_Quietly_Plays&Special_Ability_(2_SE);8dx"
+    - "16;5;5;-;8dx"
+    - "17;6;5;-;9dx"
+    - "18;6;5;-;9dx"
+    - "19;6;5;-;10dx"
+    - "20;6;6;Heaven_Calls;10dx"
+  abilities:
+    - "Anchored_Stand"
+    - "Armored_Stand"
+    - "Defensive_Ability"
+    - "Immense_Resistance"               
+    - "Melee_Barrage"               
+    - "Mobile_Ability"               
+    - "Oblivious_Facade"               
+    - "Ranged_Attack"               
+    - "Self-Repair"
+    - "Stand_Rush"               
+- name: "Hive"
+  description: "It is said that Stands reflect their users. Hive-Type Stand Users are those that idolize the idea of individuals working as a team. Their Stands are formed of many much smaller Sub-Stands, each one with only a fragment of the power of a full Stand. These smaller parts may act in tandem or each one separately. Because of this, Hive Stands have around the same strength as a normal Stand, but they all have great spe."
+  attack_dice: "1d6"
+  attack_dice_past_level_eleven: "2d6"
+  hit_dice: "1d8" 
+  on_level_up: "1d4"
+  note: "When attacking using a Swarm of Stands, there is a way to attack with all of them without rolling dozens of attacks. Firstly, if more than half of the Instances are attacking at once you can treat it like a regular Stand Attack, using 1d6 + Power/N where N is the number of Instances attacking. If less than half of your instances are attacking, assume a certain percentage of them land a Stand Hit (unless the target does not have a Stand, in which case it is direct), but they may only deal 1 damage per hit. At Level 1 this percentage is 5%, meaning Swarm damage is equal to N/20 with a minimum of 1 damage, where N is the number of Instances attacking. At Level 11 this increases to 10%, or N/10, with a minimum of 1 damage. You may not add Power to this damage. Note: Keep an eye on your health. The amount of Instances available for you to use is determined by the percentage of health you are at. If you are at 50% Health, you only have 50% of your Hive Stand available for use. When you are at 0 Hit Points, you may still have a maximum of 1 Stand Instance that functions, but it is recalled, and cannot act in any way. Your amount of Stand Instances only drops to 0 when you die."
+  special:
+    - 10
+    - 100
+    - 250
+    - 500
+  modification_chart: 
+    str: 3
+    dex: 2
+    con: 3
+    itl: 10
+    wis: 3
+    cha: 2
+  levels:
+    - "1;2;2;Instance_Level_1&Split_Stand;1dx"
+    - "2;2;2;Custom_Ability;1dx"
+    - "3;2;2;Ability_Score_Improvement;2dx"
+    - "4;2;2;Increase_Instance_Level|Double_the_Stat_points_you_gained_this_Level;2dx"
+    - "5;3;2;Powerful_Flex|Detached_Senses|feat=Menacing_Aura;3dx"
+    - "6;3;3;Ability_Score_Improvement;3dx"
+    - "7;3;3;Increase_Instance_Level|Double_the_Stat_points_you_gained_this_Level;4dx"
+    - "8;3;3;Ability_Score_Improvement;4dx"
+    - "9;4;3;Defensive_Wave|Mobile_Wave;5dx"
+    - "10;4;3;Ability_Score_Improvement;5dx"
+    - "11;4;4;attack_dice_inc=2d6;6dx"
+    - "12;4;4;Increase_Instance_Level|Double_the_Stat_points_you_gained_this_Level;6dx"
+    - "13;5;4;Ability_Score_Improvement;7dx"
+    - "14;5;4;stat_increase=2d6;7dx"
+    - "15;5;4;The_Requiem_Quietly_Plays&Special_Ability_(3_SE);8dx"
+    - "16;5;5;-;8dx"
+    - "17;6;5;-;9dx"
+    - "18;6;5;-;9dx"
+    - "19;6;5;-;10dx"
+    - "20;6;6;Heaven_Calls;10dx"
+  abilites:
+    - "fuckme"
+  
+  
+  
+  
+  
+  
+  

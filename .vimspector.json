@@ -1,0 +1,12 @@
+{
+  "configurations": {
+    "Go: delve debugger": {
+      "adapter": "delve",
+      "configuration": {
+        "request": "launch",
+        "program": "${file}",
+        "mode": "debug"
+      }
+    }
+  }
+}

@@ -1,0 +1,1626 @@
+============= Generate Character Sheet ================
+============= Character Sheet Level: 0 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 0 
+p:1 - Arcana (int): 2 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 2 
+p:0 - Insight (wis): 0 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 2 
+p:0 - Medicine (wis): 0 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 0 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 0 
+proficiency bonus: 2
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 1d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 17   	 modifiers: 3 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 12   	 modifiers: 1 
+wis: 10   	 modifiers: 0 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 3   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 0   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 48   	 modifier: 4
+pre: 42   	 modifier: 4
+dur: 51   	 modifier: 5
+ran: 11   	 modifier: 1
+spe: 40   	 modifier: 4
+ngy: 26   	 modifier: 2
+char_AC: 15
+stand_AC: 19
+stand_movement: 8
+stand_attack_per_turn: 1
+stand_damage_reduction: 5
+initiative: 2
+hit_dice: 1d6
+stand_dc: 11
+hit_points: 13
+============= level up! ================
+level: 1 | prof_bonus: 2 | nof_feat: 2 | class_features: Slippery&Detached_Senses|Armored_Stand | ab_dice: 1dx
+Adding random feat...
+Adding random feat: Consistent Accuracy
+Added feat: Consistent Accuracy
+Adding random feat...
+Adding random feat: Tavern Brawler
+Added feat: Tavern Brawler
+Adding Ability: Slippery
+Added ability: Slippery
+============= Generate Character Sheet ================
+Found multiple abilities, picking random from: Detached_Senses|Armored_Stand
+Adding Ability: Detached_Senses
+Added ability: Detached_Senses
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 1
+Adding the Constitution modifier of: 3
+Changed hit points from: 13 to: 17
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 2
+Adding the level of the stand user: 1
+Total points to spend: 4
+NEW: Stand Ability Scores:
+pow: 48   	 modifier: 4
+pre: 44   	 modifier: 4
+dur: 51   	 modifier: 5
+ran: 12   	 modifier: 1
+spe: 41   	 modifier: 4
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 1d8 to: 1d8
+============= Character Sheet Level: 1 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 0 
+p:1 - Arcana (int): 2 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 2 
+p:0 - Insight (wis): 0 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 2 
+p:0 - Medicine (wis): 0 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 0 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 0 
+proficiency bonus: 2
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 1d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 17   	 modifiers: 3 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 12   	 modifiers: 1 
+wis: 10   	 modifiers: 0 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 3   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 0   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 48   	 modifier: 4
+pre: 44   	 modifier: 4
+dur: 51   	 modifier: 5
+ran: 12   	 modifier: 1
+spe: 41   	 modifier: 4
+ngy: 26   	 modifier: 2
+char_AC: 15
+stand_AC: 19
+stand_movement: 8
+stand_attack_per_turn: 1
+stand_damage_reduction: 5
+initiative: 2
+hit_dice: 1d6
+stand_dc: 11
+hit_points: 17
+============= level up! ================
+level: 2 | prof_bonus: 2 | nof_feat: 2 | class_features: Custom_Ability | ab_dice: 1dx
+Please discuss a self made ability with your dm
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 3
+Adding the Constitution modifier of: 3
+Changed hit points from: 17 to: 23
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 1
+Adding the level of the stand user: 2
+Total points to spend: 4
+NEW: Stand Ability Scores:
+pow: 48   	 modifier: 4
+pre: 44   	 modifier: 4
+dur: 54   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 41   	 modifier: 4
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 1d8 to: 1d8
+============= Character Sheet Level: 2 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 0 
+p:1 - Arcana (int): 2 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 2 
+p:0 - Insight (wis): 0 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 2 
+p:0 - Medicine (wis): 0 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 0 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 0 
+proficiency bonus: 2
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 1d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 17   	 modifiers: 3 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 12   	 modifiers: 1 
+wis: 10   	 modifiers: 0 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 3   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 0   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 48   	 modifier: 4
+pre: 44   	 modifier: 4
+dur: 54   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 41   	 modifier: 4
+ngy: 26   	 modifier: 2
+char_AC: 15
+stand_AC: 19
+stand_movement: 8
+stand_attack_per_turn: 1
+stand_damage_reduction: 5
+initiative: 2
+hit_dice: 1d6
+stand_dc: 11
+hit_points: 23
+============= level up! ================
+level: 3 | prof_bonus: 2 | nof_feat: 2 | class_features: Ability_Score_Improvement | ab_dice: 2dx
+Improving Ability Scores...
+Improved: con
+Improved: str
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 2
+Adding the Constitution modifier of: 4
+Changed hit points from: 23 to: 29
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 1
+Adding the level of the stand user: 3
+Total points to spend: 5
+NEW: Stand Ability Scores:
+pow: 50   	 modifier: 5
+pre: 44   	 modifier: 4
+dur: 55   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 43   	 modifier: 4
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 1d8 to: 2d8
+============= Character Sheet Level: 3 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 0 
+p:1 - Arcana (int): 2 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 2 
+p:0 - Insight (wis): 0 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 2 
+p:0 - Medicine (wis): 0 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 0 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 0 
+proficiency bonus: 2
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 2d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 18   	 modifiers: 4 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 13   	 modifiers: 1 
+wis: 10   	 modifiers: 0 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 4   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 0   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 50   	 modifier: 5
+pre: 44   	 modifier: 4
+dur: 55   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 43   	 modifier: 4
+ngy: 26   	 modifier: 2
+char_AC: 16
+stand_AC: 19
+stand_movement: 8
+stand_attack_per_turn: 1
+stand_damage_reduction: 5
+initiative: 2
+hit_dice: 1d6
+stand_dc: 11
+hit_points: 29
+============= level up! ================
+level: 4 | prof_bonus: 2 | nof_feat: 2 | class_features: Melee_Barrage|Ranged_Attack | ab_dice: 2dx
+Found multiple abilities, picking random from: Melee_Barrage|Ranged_Attack
+Adding Ability: Ranged_Attack
+Added ability: Ranged_Attack
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 1
+Adding the Constitution modifier of: 4
+Changed hit points from: 29 to: 34
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 1
+Adding the level of the stand user: 4
+Total points to spend: 6
+NEW: Stand Ability Scores:
+pow: 50   	 modifier: 5
+pre: 44   	 modifier: 4
+dur: 58   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 46   	 modifier: 4
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 2d8 to: 2d8
+============= Character Sheet Level: 4 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 0 
+p:1 - Arcana (int): 2 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 2 
+p:0 - Insight (wis): 0 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 2 
+p:0 - Medicine (wis): 0 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 0 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 0 
+proficiency bonus: 2
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 2d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 18   	 modifiers: 4 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 13   	 modifiers: 1 
+wis: 10   	 modifiers: 0 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 4   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 0   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 50   	 modifier: 5
+pre: 44   	 modifier: 4
+dur: 58   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 46   	 modifier: 4
+ngy: 26   	 modifier: 2
+char_AC: 16
+stand_AC: 19
+stand_movement: 8
+stand_attack_per_turn: 1
+stand_damage_reduction: 5
+initiative: 2
+hit_dice: 1d6
+stand_dc: 11
+hit_points: 34
+============= level up! ================
+level: 5 | prof_bonus: 3 | nof_feat: 2 | class_features: Oblivious_Facade|feat=Clever_Disguise | ab_dice: 3dx
+Found multiple abilities, picking random from: Oblivious_Facade|feat=Clever_Disguise
+Adding Ability: Oblivious_Facade
+Added ability: Oblivious_Facade
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 4
+Adding the Constitution modifier of: 4
+Changed hit points from: 34 to: 42
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 1
+Adding the level of the stand user: 5
+Total points to spend: 7
+NEW: Stand Ability Scores:
+pow: 55   	 modifier: 5
+pre: 44   	 modifier: 4
+dur: 58   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 48   	 modifier: 4
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 2d8 to: 3d8
+============= Character Sheet Level: 5 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 0 
+p:1 - Arcana (int): 3 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 3 
+p:0 - Insight (wis): 0 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 3 
+p:0 - Medicine (wis): 0 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 0 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 0 
+proficiency bonus: 3
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 3d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 18   	 modifiers: 4 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 13   	 modifiers: 1 
+wis: 10   	 modifiers: 0 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 4   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 0   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 55   	 modifier: 5
+pre: 44   	 modifier: 4
+dur: 58   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 48   	 modifier: 4
+ngy: 26   	 modifier: 2
+char_AC: 16
+stand_AC: 19
+stand_movement: 8
+stand_attack_per_turn: 1
+stand_damage_reduction: 5
+initiative: 2
+hit_dice: 1d6
+stand_dc: 12
+hit_points: 42
+============= level up! ================
+level: 6 | prof_bonus: 3 | nof_feat: 3 | class_features: Ability_Score_Improvement | ab_dice: 3dx
+Adding random feat...
+Adding random feat: Shield Master
+Added feat: Shield Master
+Improving Ability Scores...
+Improved: wis
+Improved: con
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 1
+Adding the Constitution modifier of: 4
+Changed hit points from: 42 to: 47
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 2
+Roll nr2: 3
+Adding the level of the stand user: 6
+Total points to spend: 11
+NEW: Stand Ability Scores:
+pow: 55   	 modifier: 5
+pre: 55   	 modifier: 5
+dur: 58   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 48   	 modifier: 4
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 3d8 to: 3d8
+============= Character Sheet Level: 6 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 0 
+p:1 - Arcana (int): 3 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 3 
+p:0 - Insight (wis): 0 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 3 
+p:0 - Medicine (wis): 0 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 0 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 0 
+proficiency bonus: 3
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 3d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 19   	 modifiers: 4 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 13   	 modifiers: 1 
+wis: 11   	 modifiers: 0 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 4   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 0   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 55   	 modifier: 5
+pre: 55   	 modifier: 5
+dur: 58   	 modifier: 5
+ran: 13   	 modifier: 1
+spe: 48   	 modifier: 4
+ngy: 26   	 modifier: 2
+char_AC: 16
+stand_AC: 19
+stand_movement: 8
+stand_attack_per_turn: 1
+stand_damage_reduction: 5
+initiative: 2
+hit_dice: 1d6
+stand_dc: 12
+hit_points: 47
+============= level up! ================
+level: 7 | prof_bonus: 3 | nof_feat: 3 | class_features: Silent_Movement|Speedy_Movement | ab_dice: 4dx
+Found multiple abilities, picking random from: Silent_Movement|Speedy_Movement
+Adding Ability: Silent_Movement
+Added ability: Silent_Movement
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 4
+Adding the Constitution modifier of: 4
+Changed hit points from: 47 to: 55
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 3
+Adding the level of the stand user: 7
+Total points to spend: 11
+NEW: Stand Ability Scores:
+pow: 55   	 modifier: 5
+pre: 55   	 modifier: 5
+dur: 58   	 modifier: 5
+ran: 15   	 modifier: 1
+spe: 57   	 modifier: 5
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 3d8 to: 4d8
+============= Character Sheet Level: 7 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 0 
+p:1 - Arcana (int): 3 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 3 
+p:0 - Insight (wis): 0 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 3 
+p:0 - Medicine (wis): 0 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 0 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 0 
+proficiency bonus: 3
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 4d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 19   	 modifiers: 4 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 13   	 modifiers: 1 
+wis: 11   	 modifiers: 0 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 4   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 0   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 55   	 modifier: 5
+pre: 55   	 modifier: 5
+dur: 58   	 modifier: 5
+ran: 15   	 modifier: 1
+spe: 57   	 modifier: 5
+ngy: 26   	 modifier: 2
+char_AC: 16
+stand_AC: 20
+stand_movement: 8
+stand_attack_per_turn: 1
+stand_damage_reduction: 5
+initiative: 2
+hit_dice: 1d6
+stand_dc: 12
+hit_points: 55
+============= level up! ================
+level: 8 | prof_bonus: 3 | nof_feat: 3 | class_features: choose=4|5|7&Ability_Score_Improvement | ab_dice: 4dx
+Choosing ability, from one of the following levels: choose=4|5|7
+Picking Ability from level: 4
+Attempting to add ability: Ranged_Attack
+Adding Ability: Ranged_Attack
+Added ability: Ranged_Attack
+============= Generate Character Sheet ================
+Improving Ability Scores...
+Improved: wis
+Improved: con
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 1
+Adding the Constitution modifier of: 5
+Changed hit points from: 55 to: 61
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 3
+Adding the level of the stand user: 8
+Total points to spend: 12
+NEW: Stand Ability Scores:
+pow: 56   	 modifier: 5
+pre: 55   	 modifier: 5
+dur: 69   	 modifier: 6
+ran: 15   	 modifier: 1
+spe: 57   	 modifier: 5
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 4d8 to: 4d8
+============= Character Sheet Level: 8 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 3 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 3 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 3 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 1 
+proficiency bonus: 3
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 4d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 13   	 modifiers: 1 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 56   	 modifier: 5
+pre: 55   	 modifier: 5
+dur: 69   	 modifier: 6
+ran: 15   	 modifier: 1
+spe: 57   	 modifier: 5
+ngy: 26   	 modifier: 2
+char_AC: 17
+stand_AC: 20
+stand_movement: 10
+stand_attack_per_turn: 2
+stand_damage_reduction: 5
+initiative: 3
+hit_dice: 1d6
+stand_dc: 12
+hit_points: 61
+============= level up! ================
+level: 9 | prof_bonus: 4 | nof_feat: 3 | class_features: Pincer_Attack|Hot_Pursuit | ab_dice: 5dx
+Found multiple abilities, picking random from: Pincer_Attack|Hot_Pursuit
+Adding Ability: Hot_Pursuit
+Added ability: Hot_Pursuit
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 3
+Adding the Constitution modifier of: 5
+Changed hit points from: 61 to: 69
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 1
+Adding the level of the stand user: 9
+Total points to spend: 11
+NEW: Stand Ability Scores:
+pow: 59   	 modifier: 5
+pre: 57   	 modifier: 5
+dur: 70   	 modifier: 7
+ran: 16   	 modifier: 1
+spe: 61   	 modifier: 6
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 4d8 to: 5d8
+============= Character Sheet Level: 9 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 4 
+p:0 - Athlete (str): 1 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 4 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 4 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 1 
+proficiency bonus: 4
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 5d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 14   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 13   	 modifiers: 1 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 1   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 59   	 modifier: 5
+pre: 57   	 modifier: 5
+dur: 70   	 modifier: 7
+ran: 16   	 modifier: 1
+spe: 61   	 modifier: 6
+ngy: 26   	 modifier: 2
+char_AC: 17
+stand_AC: 21
+stand_movement: 10
+stand_attack_per_turn: 2
+stand_damage_reduction: 6
+initiative: 3
+hit_dice: 1d6
+stand_dc: 13
+hit_points: 69
+============= level up! ================
+level: 10 | prof_bonus: 4 | nof_feat: 3 | class_features: Ability_Score_Improvement | ab_dice: 5dx
+Improving Ability Scores...
+Improved: str
+Improved: dex
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 3
+Adding the Constitution modifier of: 5
+Changed hit points from: 69 to: 77
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 3
+Roll nr2: 2
+Adding the level of the stand user: 10
+Total points to spend: 15
+NEW: Stand Ability Scores:
+pow: 59   	 modifier: 5
+pre: 57   	 modifier: 5
+dur: 75   	 modifier: 7
+ran: 18   	 modifier: 1
+spe: 69   	 modifier: 6
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 5d8 to: 5d8
+============= Character Sheet Level: 10 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 4 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 4 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 4 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 1 
+proficiency bonus: 4
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 5d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 15   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 59   	 modifier: 5
+pre: 57   	 modifier: 5
+dur: 75   	 modifier: 7
+ran: 18   	 modifier: 1
+spe: 69   	 modifier: 6
+ngy: 26   	 modifier: 2
+char_AC: 17
+stand_AC: 23
+stand_movement: 12
+stand_attack_per_turn: 2
+stand_damage_reduction: 7
+initiative: 3
+hit_dice: 1d6
+stand_dc: 13
+hit_points: 77
+============= level up! ================
+level: 11 | prof_bonus: 4 | nof_feat: 4 | class_features: attack_dice_inc=1d10 | ab_dice: 6dx
+Adding random feat...
+Adding random feat: Heart of Truth
+Added feat: Heart of Truth
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 1d6
+Roll nr1: 1
+Adding the Constitution modifier of: 5
+Changed hit points from: 77 to: 83
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 1
+Adding the level of the stand user: 11
+Total points to spend: 13
+NEW: Stand Ability Scores:
+pow: 60   	 modifier: 6
+pre: 65   	 modifier: 6
+dur: 77   	 modifier: 7
+ran: 19   	 modifier: 1
+spe: 70   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 5d8 to: 6d8
+============= Character Sheet Level: 11 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 4 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 4 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 4 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 1 
+proficiency bonus: 4
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 6d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 15   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 60   	 modifier: 6
+pre: 65   	 modifier: 6
+dur: 77   	 modifier: 7
+ran: 19   	 modifier: 1
+spe: 70   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 17
+stand_AC: 23
+stand_movement: 12
+stand_attack_per_turn: 2
+stand_damage_reduction: 7
+initiative: 3
+hit_dice: 2d10
+stand_dc: 13
+hit_points: 83
+============= level up! ================
+level: 12 | prof_bonus: 4 | nof_feat: 4 | class_features: choose=4|5|7|9 | ab_dice: 6dx
+Choosing ability, from one of the following levels: choose=4|5|7|9
+Picking Ability from level: 7
+Attempting to add ability: Silent_Movement
+Adding Ability: Silent_Movement
+Added ability: Silent_Movement
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 2d10
+Roll nr1: 1
+Roll nr2: 2
+Adding the Constitution modifier of: 5
+Changed hit points from: 83 to: 91
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 1
+Adding the level of the stand user: 12
+Total points to spend: 14
+NEW: Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 65   	 modifier: 6
+dur: 81   	 modifier: 8
+ran: 22   	 modifier: 2
+spe: 70   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 6d8 to: 6d8
+============= Character Sheet Level: 12 ================
+p:0 - Acrobatics (dex): 2 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 4 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 4 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 4 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 0 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 0 
+p:0 - SlightOfHand (dex): 2 
+p:0 - Stealth (dex): 2 
+p:0 - Survival (wis): 1 
+proficiency bonus: 4
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 6d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 15   	 modifiers: 2 
+itl: 11   	 modifiers: 0 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 2   	 is_poficient: 0 
+itl: 0   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 65   	 modifier: 6
+dur: 81   	 modifier: 8
+ran: 22   	 modifier: 2
+spe: 70   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 17
+stand_AC: 24
+stand_movement: 14
+stand_attack_per_turn: 2
+stand_damage_reduction: 7
+initiative: 3
+hit_dice: 2d10
+stand_dc: 13
+hit_points: 91
+============= level up! ================
+level: 13 | prof_bonus: 5 | nof_feat: 4 | class_features: Ability_Score_Improvement | ab_dice: 7dx
+Improving Ability Scores...
+Improved: itl
+Improved: dex
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 2d10
+Roll nr1: 5
+Roll nr2: 6
+Adding the Constitution modifier of: 5
+Changed hit points from: 91 to: 107
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 2
+Adding the level of the stand user: 13
+Total points to spend: 16
+NEW: Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 80   	 modifier: 8
+dur: 82   	 modifier: 8
+ran: 22   	 modifier: 2
+spe: 70   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 6d8 to: 7d8
+============= Character Sheet Level: 13 ================
+p:0 - Acrobatics (dex): 3 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 6 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 6 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 6 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 1 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 1 
+p:0 - SlightOfHand (dex): 3 
+p:0 - Stealth (dex): 3 
+p:0 - Survival (wis): 1 
+proficiency bonus: 5
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 7d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 16   	 modifiers: 3 
+itl: 12   	 modifiers: 1 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 3   	 is_poficient: 0 
+itl: 1   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 80   	 modifier: 8
+dur: 82   	 modifier: 8
+ran: 22   	 modifier: 2
+spe: 70   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 18
+stand_AC: 25
+stand_movement: 14
+stand_attack_per_turn: 2
+stand_damage_reduction: 8
+initiative: 4
+hit_dice: 2d10
+stand_dc: 14
+hit_points: 107
+============= level up! ================
+level: 14 | prof_bonus: 5 | nof_feat: 4 | class_features: Stand_Pickpocketing|Menacing_Aura | ab_dice: 7dx
+Found multiple abilities, picking random from: Stand_Pickpocketing|Menacing_Aura
+Adding Ability: Menacing_Aura
+Ability: Menacing_Aura - not configure for this stand, what went wrong???
+Found multiple abilities, picking random from: Stand_Pickpocketing|Menacing_Aura
+Adding Ability: Stand_Pickpocketing
+Added ability: Stand_Pickpocketing
+============= Generate Character Sheet ================
+Increasing hit points of character!
+Using hit dice: 2d10
+Roll nr1: 1
+Roll nr2: 7
+Adding the Constitution modifier of: 5
+Changed hit points from: 107 to: 120
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 2
+Adding the level of the stand user: 14
+Total points to spend: 17
+NEW: Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 84   	 modifier: 8
+dur: 82   	 modifier: 8
+ran: 34   	 modifier: 3
+spe: 71   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 7d8 to: 7d8
+============= Character Sheet Level: 14 ================
+p:0 - Acrobatics (dex): 3 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 6 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 6 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 6 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 1 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 1 
+p:0 - SlightOfHand (dex): 3 
+p:0 - Stealth (dex): 3 
+p:0 - Survival (wis): 1 
+proficiency bonus: 5
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 7d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 16   	 modifiers: 3 
+itl: 12   	 modifiers: 1 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 3   	 is_poficient: 0 
+itl: 1   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 84   	 modifier: 8
+dur: 82   	 modifier: 8
+ran: 34   	 modifier: 3
+spe: 71   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 18
+stand_AC: 26
+stand_movement: 14
+stand_attack_per_turn: 2
+stand_damage_reduction: 8
+initiative: 4
+hit_dice: 2d10
+stand_dc: 14
+hit_points: 120
+============= level up! ================
+level: 15 | prof_bonus: 5 | nof_feat: 4 | class_features: The_Requiem_Quietly_Plays&Special_Ability_(2_SE) | ab_dice: 8dx
+Increasing hit points of character!
+Using hit dice: 2d10
+Roll nr1: 8
+Roll nr2: 1
+Adding the Constitution modifier of: 5
+Changed hit points from: 120 to: 134
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 1
+Adding the level of the stand user: 15
+Total points to spend: 17
+NEW: Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 84   	 modifier: 8
+dur: 84   	 modifier: 8
+ran: 49   	 modifier: 4
+spe: 71   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 7d8 to: 8d8
+============= Character Sheet Level: 15 ================
+p:0 - Acrobatics (dex): 3 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 6 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 6 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 6 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 1 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 1 
+p:0 - SlightOfHand (dex): 3 
+p:0 - Stealth (dex): 3 
+p:0 - Survival (wis): 1 
+proficiency bonus: 5
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 8d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 16   	 modifiers: 3 
+itl: 12   	 modifiers: 1 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 3   	 is_poficient: 0 
+itl: 1   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 84   	 modifier: 8
+dur: 84   	 modifier: 8
+ran: 49   	 modifier: 4
+spe: 71   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 18
+stand_AC: 26
+stand_movement: 14
+stand_attack_per_turn: 2
+stand_damage_reduction: 8
+initiative: 4
+hit_dice: 2d10
+stand_dc: 14
+hit_points: 134
+============= level up! ================
+level: 16 | prof_bonus: 5 | nof_feat: 5 | class_features: - | ab_dice: 8dx
+Adding random feat...
+Adding random feat: Paranoia
+Added feat: Paranoia
+Increasing hit points of character!
+Using hit dice: 2d10
+Roll nr1: 7
+Roll nr2: 5
+Adding the Constitution modifier of: 5
+Changed hit points from: 134 to: 151
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 3
+Adding the level of the stand user: 16
+Total points to spend: 20
+NEW: Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 84   	 modifier: 8
+dur: 96   	 modifier: 9
+ran: 57   	 modifier: 5
+spe: 71   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 8d8 to: 8d8
+============= Character Sheet Level: 16 ================
+p:0 - Acrobatics (dex): 3 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 6 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 6 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 6 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 1 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 1 
+p:0 - SlightOfHand (dex): 3 
+p:0 - Stealth (dex): 3 
+p:0 - Survival (wis): 1 
+proficiency bonus: 5
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 8d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 16   	 modifiers: 3 
+itl: 12   	 modifiers: 1 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 3   	 is_poficient: 0 
+itl: 1   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 67   	 modifier: 6
+pre: 84   	 modifier: 8
+dur: 96   	 modifier: 9
+ran: 57   	 modifier: 5
+spe: 71   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 18
+stand_AC: 26
+stand_movement: 14
+stand_attack_per_turn: 2
+stand_damage_reduction: 8
+initiative: 4
+hit_dice: 2d10
+stand_dc: 14
+hit_points: 151
+============= level up! ================
+level: 17 | prof_bonus: 6 | nof_feat: 5 | class_features: - | ab_dice: 9dx
+Increasing hit points of character!
+Using hit dice: 2d10
+Roll nr1: 9
+Roll nr2: 5
+Adding the Constitution modifier of: 5
+Changed hit points from: 151 to: 170
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 2
+Roll nr2: 1
+Adding the level of the stand user: 17
+Total points to spend: 20
+NEW: Stand Ability Scores:
+pow: 75   	 modifier: 7
+pre: 84   	 modifier: 8
+dur: 106   	 modifier: 10
+ran: 57   	 modifier: 5
+spe: 73   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 8d8 to: 9d8
+============= Character Sheet Level: 17 ================
+p:0 - Acrobatics (dex): 3 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 7 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 7 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 7 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 1 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 1 
+p:0 - SlightOfHand (dex): 3 
+p:0 - Stealth (dex): 3 
+p:0 - Survival (wis): 1 
+proficiency bonus: 6
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 9d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 16   	 modifiers: 3 
+itl: 12   	 modifiers: 1 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 3   	 is_poficient: 0 
+itl: 1   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 75   	 modifier: 7
+pre: 84   	 modifier: 8
+dur: 106   	 modifier: 10
+ran: 57   	 modifier: 5
+spe: 73   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 18
+stand_AC: 26
+stand_movement: 14
+stand_attack_per_turn: 2
+stand_damage_reduction: 8
+initiative: 4
+hit_dice: 2d10
+stand_dc: 14
+hit_points: 170
+============= level up! ================
+level: 18 | prof_bonus: 6 | nof_feat: 5 | class_features: - | ab_dice: 9dx
+Increasing hit points of character!
+Using hit dice: 2d10
+Roll nr1: 8
+Roll nr2: 9
+Adding the Constitution modifier of: 5
+Changed hit points from: 170 to: 192
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 2
+Roll nr2: 3
+Adding the level of the stand user: 18
+Total points to spend: 23
+NEW: Stand Ability Scores:
+pow: 97   	 modifier: 9
+pre: 84   	 modifier: 8
+dur: 107   	 modifier: 10
+ran: 57   	 modifier: 5
+spe: 73   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 9d8 to: 9d8
+============= Character Sheet Level: 18 ================
+p:0 - Acrobatics (dex): 3 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 7 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 7 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 7 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 1 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 1 
+p:0 - SlightOfHand (dex): 3 
+p:0 - Stealth (dex): 3 
+p:0 - Survival (wis): 1 
+proficiency bonus: 6
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 9d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 16   	 modifiers: 3 
+itl: 12   	 modifiers: 1 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 3   	 is_poficient: 0 
+itl: 1   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 97   	 modifier: 9
+pre: 84   	 modifier: 8
+dur: 107   	 modifier: 10
+ran: 57   	 modifier: 5
+spe: 73   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 18
+stand_AC: 26
+stand_movement: 14
+stand_attack_per_turn: 2
+stand_damage_reduction: 8
+initiative: 4
+hit_dice: 2d10
+stand_dc: 14
+hit_points: 192
+============= level up! ================
+level: 19 | prof_bonus: 6 | nof_feat: 5 | class_features: - | ab_dice: 10dx
+Increasing hit points of character!
+Using hit dice: 2d10
+Roll nr1: 1
+Roll nr2: 6
+Adding the Constitution modifier of: 5
+Changed hit points from: 192 to: 204
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 2
+Roll nr2: 1
+Adding the level of the stand user: 19
+Total points to spend: 22
+NEW: Stand Ability Scores:
+pow: 97   	 modifier: 9
+pre: 85   	 modifier: 8
+dur: 108   	 modifier: 10
+ran: 76   	 modifier: 7
+spe: 74   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 9d8 to: 10d8
+============= Character Sheet Level: 19 ================
+p:0 - Acrobatics (dex): 3 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 7 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 7 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 7 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 1 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 1 
+p:0 - SlightOfHand (dex): 3 
+p:0 - Stealth (dex): 3 
+p:0 - Survival (wis): 1 
+proficiency bonus: 6
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 10d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 16   	 modifiers: 3 
+itl: 12   	 modifiers: 1 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 3   	 is_poficient: 0 
+itl: 1   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 97   	 modifier: 9
+pre: 85   	 modifier: 8
+dur: 108   	 modifier: 10
+ran: 76   	 modifier: 7
+spe: 74   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 18
+stand_AC: 26
+stand_movement: 14
+stand_attack_per_turn: 2
+stand_damage_reduction: 8
+initiative: 4
+hit_dice: 2d10
+stand_dc: 14
+hit_points: 204
+============= level up! ================
+level: 20 | prof_bonus: 6 | nof_feat: 6 | class_features: Heaven_Calls | ab_dice: 10dx
+Adding random feat...
+Adding random feat: Paranoia
+Feat: Paranoia already in character, trying again...
+Increasing hit points of character!
+Using hit dice: 2d10
+Roll nr1: 7
+Roll nr2: 8
+Adding the Constitution modifier of: 5
+Changed hit points from: 204 to: 224
+Increasing hit points of character!
+Using level up dice: 2d4
+Roll nr1: 1
+Roll nr2: 2
+Adding the level of the stand user: 20
+Total points to spend: 23
+NEW: Stand Ability Scores:
+pow: 120   	 modifier: 12
+pre: 85   	 modifier: 8
+dur: 108   	 modifier: 10
+ran: 76   	 modifier: 7
+spe: 74   	 modifier: 7
+ngy: 26   	 modifier: 2
+Ability Dice Increased from: 10d8 to: 10d8
+============= Character Sheet Level: 20 ================
+p:0 - Acrobatics (dex): 3 
+p:0 - AnimalHandling (wis): 1 
+p:1 - Arcana (int): 7 
+p:0 - Athlete (str): 2 
+p:0 - Deception (cha): 1 
+p:1 - History (int): 7 
+p:0 - Insight (wis): 1 
+p:0 - Intimidation (cha): 1 
+p:1 - Investigation (int): 7 
+p:0 - Medicine (wis): 1 
+p:0 - Nature (int): 1 
+p:0 - Perception (wis): 1 
+p:0 - Performer (cha): 1 
+p:0 - Persuasion (cha): 1 
+p:0 - Religion (int): 1 
+p:0 - SlightOfHand (dex): 3 
+p:0 - Stealth (dex): 3 
+p:0 - Survival (wis): 1 
+proficiency bonus: 6
+Passions: Academics
+Stand Type: Ranged
+Ability Dice: 10d8
+Ability Score:
+cha: 13   	 modifiers: 1 
+con: 20   	 modifiers: 5 
+dex: 16   	 modifiers: 3 
+itl: 12   	 modifiers: 1 
+str: 14   	 modifiers: 2 
+wis: 12   	 modifiers: 1 
+Saving Throws:
+cha: 1   	 is_poficient: 0 
+con: 5   	 is_poficient: 1 
+dex: 3   	 is_poficient: 0 
+itl: 1   	 is_poficient: 1 
+str: 2   	 is_poficient: 0 
+wis: 1   	 is_poficient: 0 
+Stand Ability Scores:
+pow: 120   	 modifier: 12
+pre: 85   	 modifier: 8
+dur: 108   	 modifier: 10
+ran: 76   	 modifier: 7
+spe: 74   	 modifier: 7
+ngy: 26   	 modifier: 2
+char_AC: 18
+stand_AC: 26
+stand_movement: 14
+stand_attack_per_turn: 2
+stand_damage_reduction: 8
+initiative: 4
+hit_dice: 2d10
+stand_dc: 14
+hit_points: 224
