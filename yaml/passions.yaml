@@ -1,0 +1,272 @@
+Passions:
+- name: "Academics"
+  description: "Academics do exactly as the name suggests. They study hard, or teach hard, using their intelligence and experience to do their jobs."
+  examples: "Professors Accountants Teachers Programmers Scientists Researchers" 
+  traits:
+    saving_throws: 
+      - "con"
+      - "itl"
+    ability_scores: 
+      str: 0
+      dex: 0
+      con: 0
+      itl: 2
+      wis: 0
+      cha: 0
+    proficiencies: 
+      - "Arcana"
+      - "History"
+      - "Investigation"
+    proficiencies_extra: ""
+    languages: 2
+    extra: ""
+- name: "Artist"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "dex"
+      - "itl"
+    ability_scores: 
+      str: 0
+      dex: 2
+      con: 0
+      itl: 1
+      wis: 0
+      cha: 0
+    proficiencies: 
+      - "Slight Of Hand"
+      - "Performance"
+    proficiencies_extra: "Tool:ArtistTools|Instrument"
+    languages: 0
+    extra: ""
+- name: "Athlete"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "str"
+      - "dex|con"
+    ability_scores: 
+      str: 2
+      dex: 1
+      con: 0
+      itl: 0
+      wis: 0
+      cha: 0
+    proficiencies: 
+      - "Athletics"
+      - "Acrobatics"
+    proficiencies_extra: "nvt"
+    languages: 0
+    extra: ""
+- name: "Con Artist"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "cha"
+      - "itl"
+    ability_scores: 
+      str: 0
+      dex: 0
+      con: 0
+      itl: 0
+      wis: 0
+      cha: 2
+    proficiencies: 
+      - "Deception"
+      - "Persuasion"
+      - "Intimidation"
+      - "Religion"
+    proficiencies_extra: "nvt"
+    languages: 3
+    extra: ""
+- name: "Hard Laborer"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "dex"
+      - "con"
+    ability_scores: 
+      str: 1
+      dex: 1
+      con: 2
+      itl: 0
+      wis: 0
+      cha: 0
+    proficiencies: 
+      - "Athletics|Acrobatics|AnimalHandling|Intimidation"
+      - "Athletics|Acrobatics|AnimalHandling|Intimidation"
+    proficiencies_extra: "nvt"
+    languages: 0
+    extra: ""
+- name: "Performer"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "cha"
+      - "con"
+    ability_scores: 
+      str: 0
+      dex: 0
+      con: 1
+      itl: 0
+      wis: 0
+      cha: 2
+    proficiencies: 
+      - "Deception"
+      - "Persuasion"
+      - "Performance"
+    proficiencies_extra: "Tool:2Instruments"
+    languages: 0
+    extra: ""
+- name: "Physician"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "itl"
+      - "wis"
+    ability_scores: 
+      str: 0
+      dex: 0
+      con: 0
+      itl: 2
+      wis: 1
+      cha: 0
+    proficiencies: 
+      - "AnimalHandling"
+      - "exp:Medicine"
+    proficiencies_extra: "nvt"
+    languages: 0
+    extra: ""
+- name: "Service Worker"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "wis"
+      - "cha"
+    ability_scores: 
+      str: 0
+      dex: 0
+      con: 0
+      itl: 0
+      wis: 1
+      cha: 1
+    proficiencies: 
+      - "Insight"
+      - "Perception"
+      - "Persuasion"
+    proficiencies_extra: "nvt"
+    languages: 2
+    extra: ""
+- name: "Student"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "any"
+      - "any"
+    ability_scores: 
+      str: 0
+      dex: 0
+      con: 0
+      itl: 0
+      wis: 0
+      cha: 0
+    proficiencies: 
+      - "any"
+      - "any"
+      - "any"
+    proficiencies_extra: "ability_scores:2to1&1to3&-1to2!"
+    languages: 2
+    extra: ""
+- name: "Survivalist"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "con"
+      - "wis"
+    ability_scores: 
+      str: 0
+      dex: 0
+      con: 2
+      itl: 0
+      wis: 2
+      cha: 0
+    proficiencies: 
+      - "Insight"
+      - "Perception"
+      - "AnimalHandling"
+      - "Survival"
+    proficiencies_extra: "Tool:HerbalismKit"
+    languages: 0
+    extra: ""
+- name: "Thief"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "dex"
+      - "cha"
+    ability_scores: 
+      str: 0
+      dex: 2
+      con: 0
+      itl: 0
+      wis: 0
+      cha: 1
+    proficiencies: 
+      - "SlightOfHand"
+      - "Stealth"
+      - "Intimidation"
+    proficiencies_extra: "Tool:ThievesTool"
+    languages: 0
+    extra: ""
+- name: "Trained Laborer"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "str"
+      - "itl"
+    ability_scores: 
+      str: 2
+      dex: 0
+      con: 0
+      itl: 1
+      wis: 0
+      cha: 0
+    proficiencies: 
+      - "Athletics"
+      - "Arcana"
+      - "Investigation"
+    proficiencies_extra: "Tool:ArtisansTools"
+    languages: 0
+    extra: ""
+- name: "Traveler"
+  description: ""
+  examples: "" 
+  traits:
+    saving_throws: 
+      - "wis"
+      - "con"
+    ability_scores: 
+      str: 0
+      dex: 0
+      con: 3
+      itl: 0
+      wis: 1
+      cha: 0
+    proficiencies: 
+      - "Survival"
+      - "Religion"
+    proficiencies_extra: "nvt"
+    languages: 0
+    extra: ""
+
