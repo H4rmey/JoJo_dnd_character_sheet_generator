@@ -6,6 +6,7 @@ import (
 	"log"
 	"math"
 	"math/rand"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -14,10 +15,10 @@ import (
 )
 
 type Proficiency struct {
-	level      int    `yaml:"level"`
-	value      int    `yaml:"value"`
-	stat_type  string `yaml:"stat_type"`
-	skill_name string `yaml:"skill_name"`
+	Level      int    `yaml:"level"`
+	Value      int    `yaml:"value"`
+	Stat_type  string `yaml:"stat_type"`
+	Skill_name string `yaml:"skill_name"`
 }
 
 // Stand structs
@@ -104,33 +105,34 @@ type Abilities struct {
 
 // Character_Sheet
 type Character_Sheet struct {
-	name                    string                 `yaml:"name"`
-	passion                 Passion                `yaml:"passion"`
-	char_ability_scores     map[string]int         `yaml:"char_ability_scores"`
-	char_ability_modifiers  map[string]int         `yaml:"char_ability_modifiers"`
-	skill_pro               []Proficiency          `yaml:"skill_pro"`
-	saving_throws           map[string]Proficiency `yaml:"saving_throws"`
-	ability_dice            string                 `yaml:"ability_dice"`
-	hit_points              int                    `yaml:"hit_points"`
-	armor_class             int                    `yaml:"armor_class"`
-	hit_dice                string                 `yaml:"hit_dice"`
-	initiative              int                    `yaml:"initiative"`
-	passive_perception      int                    `yaml:"passive_perception"`
-	movement                int                    `yaml:"movement"`
-	level                   int                    `yaml:"level"`
-	proficiency_bonus       int                    `yaml:"proficiency_bonus"`
-	stand_ability_scores    map[string]int         `yaml:"stand_ability_scores"`
-	stand_ability_modifiers map[string]int         `yaml:"stand_ability_modifiers"`
-	stand_damage_reduction  int                    `yaml:"stand_damage_reduction"`
-	stand_movement          int                    `yaml:"stand_damage_reduction"`
-	stand_attack_per_turn   int                    `yaml:"stand_damage_reduction"`
-	stand_dc                int                    `yaml:"stand_dc"`
-	stand_ac                int                    `yaml:"stand_ac"`
-	stand                   Stand                  `yaml:"stand"`
-	feats_list              []string               `yaml:"feats_list"`
-	abilities_list          []string               `yaml:"abilities_list"`
-	feats                   []Feat                 `yaml:"feats"`
-	abilities               []Abilities            `yaml:"abilities"`
+	Name                    string                 `yaml:"name"`
+	Passion                 Passion                `yaml:"passion"`
+	Char_ability_scores     map[string]int         `yaml:"char_ability_scores"`
+	Char_ability_modifiers  map[string]int         `yaml:"char_ability_modifiers"`
+	Skill_pro               []Proficiency          `yaml:"skill_pro"`
+	Saving_throws           map[string]Proficiency `yaml:"saving_throws"`
+	Ability_dice            string                 `yaml:"ability_dice"`
+	Hit_points              int                    `yaml:"hit_points"`
+	Hit_points_rolls        []int                  `yaml:"hit_points_rolls"`
+	Armor_class             int                    `yaml:"armor_class"`
+	Hit_dice                string                 `yaml:"hit_dice"`
+	Initiative              int                    `yaml:"initiative"`
+	Passive_perception      int                    `yaml:"passive_perception"`
+	Movement                int                    `yaml:"movement"`
+	Level                   int                    `yaml:"level"`
+	Feats_list              []string               `yaml:"feats_list"`
+	Abilities_list          []string               `yaml:"abilities_list"`
+	Feats                   []Feat                 `yaml:"feats"`
+	Abilities               []Abilities            `yaml:"abilities"`
+	Proficiency_bonus       int                    `yaml:"proficiency_bonus"`
+	Stand_ability_scores    map[string]int         `yaml:"stand_ability_scores"`
+	Stand_ability_modifiers map[string]int         `yaml:"stand_ability_modifiers"`
+	Stand_damage_reduction  int                    `yaml:"stand_damage_reduction"`
+	Stand_movement          int                    `yaml:"stand_movment"`
+	Stand_attack_per_turn   int                    `yaml:"stand_attack_per_turn"`
+	Stand_dc                int                    `yaml:"stand_dc"`
+	Stand_ac                int                    `yaml:"stand_ac"`
+	Stand                   Stand                  `yaml:"stand"`
 }
 
 // Generates the main stats of a character
@@ -220,12 +222,12 @@ func generate_passion_ability_score(passion Passion, ability_scores map[string]i
 
 func generate_passion_saving_throws(passion Passion, ability_modifiers_char map[string]int, proficiency_bonus int) map[string]Proficiency {
 	saving_throws := map[string]Proficiency{
-		"cha": Proficiency{level: 0, value: ability_modifiers_char["cha"], stat_type: "cha"},
-		"con": Proficiency{level: 0, value: ability_modifiers_char["con"], stat_type: "con"},
-		"dex": Proficiency{level: 0, value: ability_modifiers_char["dex"], stat_type: "dex"},
-		"itl": Proficiency{level: 0, value: ability_modifiers_char["itl"], stat_type: "itl"},
-		"str": Proficiency{level: 0, value: ability_modifiers_char["str"], stat_type: "str"},
-		"wis": Proficiency{level: 0, value: ability_modifiers_char["wis"], stat_type: "wis"},
+		"cha": Proficiency{Level: 0, Value: ability_modifiers_char["cha"], Stat_type: "cha"},
+		"con": Proficiency{Level: 0, Value: ability_modifiers_char["con"], Stat_type: "con"},
+		"dex": Proficiency{Level: 0, Value: ability_modifiers_char["dex"], Stat_type: "dex"},
+		"itl": Proficiency{Level: 0, Value: ability_modifiers_char["itl"], Stat_type: "itl"},
+		"str": Proficiency{Level: 0, Value: ability_modifiers_char["str"], Stat_type: "str"},
+		"wis": Proficiency{Level: 0, Value: ability_modifiers_char["wis"], Stat_type: "wis"},
 	}
 
 	saving_throws_new := passion.Traits.SavingThrows
@@ -259,11 +261,11 @@ func generate_passion_saving_throws(passion Passion, ability_modifiers_char map[
 
 		if entry, ok := saving_throws[saving_throw]; ok {
 			if strings.Contains(saving_throw, "+") {
-				entry.level = 2
+				entry.Level = 2
 			} else {
-				entry.level = 1
+				entry.Level = 1
 			}
-			entry.value += proficiency_bonus * saving_throws["cha"].level
+			entry.Value += proficiency_bonus * saving_throws["cha"].Level
 			saving_throws[saving_throw] = entry
 		}
 
@@ -275,24 +277,24 @@ func generate_passion_saving_throws(passion Passion, ability_modifiers_char map[
 func generate_passion_proficiencies(passion Passion, ability_modifiers_char map[string]int, proficiency_bonus int) []Proficiency {
 
 	var skill_pro = []Proficiency{
-		Proficiency{level: 0, value: ability_modifiers_char["dex"], stat_type: "dex", skill_name: "Acrobatics"},
-		Proficiency{level: 0, value: ability_modifiers_char["wis"], stat_type: "wis", skill_name: "AnimalHandling"},
-		Proficiency{level: 0, value: ability_modifiers_char["itl"], stat_type: "int", skill_name: "Arcana"},
-		Proficiency{level: 0, value: ability_modifiers_char["str"], stat_type: "str", skill_name: "Athlete"},
-		Proficiency{level: 0, value: ability_modifiers_char["cha"], stat_type: "cha", skill_name: "Deception"},
-		Proficiency{level: 0, value: ability_modifiers_char["itl"], stat_type: "int", skill_name: "History"},
-		Proficiency{level: 0, value: ability_modifiers_char["wis"], stat_type: "wis", skill_name: "Insight"},
-		Proficiency{level: 0, value: ability_modifiers_char["cha"], stat_type: "cha", skill_name: "Intimidation"},
-		Proficiency{level: 0, value: ability_modifiers_char["itl"], stat_type: "int", skill_name: "Investigation"},
-		Proficiency{level: 0, value: ability_modifiers_char["wis"], stat_type: "wis", skill_name: "Medicine"},
-		Proficiency{level: 0, value: ability_modifiers_char["itl"], stat_type: "int", skill_name: "Nature"},
-		Proficiency{level: 0, value: ability_modifiers_char["wis"], stat_type: "wis", skill_name: "Perception"},
-		Proficiency{level: 0, value: ability_modifiers_char["cha"], stat_type: "cha", skill_name: "Performer"},
-		Proficiency{level: 0, value: ability_modifiers_char["cha"], stat_type: "cha", skill_name: "Persuasion"},
-		Proficiency{level: 0, value: ability_modifiers_char["itl"], stat_type: "int", skill_name: "Religion"},
-		Proficiency{level: 0, value: ability_modifiers_char["dex"], stat_type: "dex", skill_name: "SlightOfHand"},
-		Proficiency{level: 0, value: ability_modifiers_char["dex"], stat_type: "dex", skill_name: "Stealth"},
-		Proficiency{level: 0, value: ability_modifiers_char["wis"], stat_type: "wis", skill_name: "Survival"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["dex"], Stat_type: "dex", Skill_name: "Acrobatics"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["wis"], Stat_type: "wis", Skill_name: "AnimalHandling"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["itl"], Stat_type: "int", Skill_name: "Arcana"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["str"], Stat_type: "str", Skill_name: "Athlete"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["cha"], Stat_type: "cha", Skill_name: "Deception"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["itl"], Stat_type: "int", Skill_name: "History"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["wis"], Stat_type: "wis", Skill_name: "Insight"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["cha"], Stat_type: "cha", Skill_name: "Intimidation"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["itl"], Stat_type: "int", Skill_name: "Investigation"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["wis"], Stat_type: "wis", Skill_name: "Medicine"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["itl"], Stat_type: "int", Skill_name: "Nature"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["wis"], Stat_type: "wis", Skill_name: "Perception"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["cha"], Stat_type: "cha", Skill_name: "Performer"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["cha"], Stat_type: "cha", Skill_name: "Persuasion"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["itl"], Stat_type: "int", Skill_name: "Religion"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["dex"], Stat_type: "dex", Skill_name: "SlightOfHand"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["dex"], Stat_type: "dex", Skill_name: "Stealth"},
+		Proficiency{Level: 0, Value: ability_modifiers_char["wis"], Stat_type: "wis", Skill_name: "Survival"},
 	}
 
 	nof_proficiencies := len(passion.Traits.Proficiencies)
@@ -310,14 +312,14 @@ func generate_passion_proficiencies(passion Passion, ability_modifiers_char map[
 		}
 
 		for p := 0; p < len(skill_pro); p++ {
-			if prof == skill_pro[p].skill_name {
+			if prof == skill_pro[p].Skill_name {
 				if strings.Contains(prof, "+") {
-					skill_pro[p].level = 2
+					skill_pro[p].Level = 2
 				} else {
-					skill_pro[p].level = 1
+					skill_pro[p].Level = 1
 				}
 
-				skill_pro[p].value += skill_pro[p].level * proficiency_bonus
+				skill_pro[p].Value += skill_pro[p].Level * proficiency_bonus
 			}
 		}
 	}
@@ -341,7 +343,7 @@ func select_passion() Passion {
 	nof_passions := len(yaml_passions.Passions)
 	char_passion := rand.Intn(nof_passions)
 
-	char_passion = 0 //TODO: remove this line!
+	//char_passion = 0 //TODO: remove this line!
 
 	return yaml_passions.Passions[char_passion]
 }
@@ -474,7 +476,7 @@ func stringInSlice(a string, list []string) bool {
 }
 
 func add_feat(cs *Character_Sheet, feat_name string) bool {
-	feats := cs.feats
+	feats := cs.Feats
 
 	var feat Feat
 	index_feat := 0
@@ -498,7 +500,7 @@ func add_feat(cs *Character_Sheet, feat_name string) bool {
 	}
 
 	//check if feat is not already added
-	if stringInSlice(feat.Name, cs.feats_list) {
+	if stringInSlice(feat.Name, cs.Feats_list) {
 		fmt.Printf("Feat: %s already in character, trying again...\n", feat.Name)
 		return false
 	}
@@ -520,25 +522,25 @@ func add_feat(cs *Character_Sheet, feat_name string) bool {
 		if strings.Contains(preq, ">") {
 			a := strings.Split(preq, ">")
 			b, _ := strconv.Atoi(a[1])
-			allow_addition = cs.char_ability_scores[a[0]] >= b
+			allow_addition = cs.Char_ability_scores[a[0]] >= b
 			break
 		} else if strings.Contains(preq, "passion") {
 			a := strings.Split(preq, "=")
-			allow_addition = cs.passion.Name == a[1]
+			allow_addition = cs.Passion.Name == a[1]
 			break
 		} else if strings.Contains(preq, "feat") {
 			a := strings.Split(preq, "=")
 			if strings.Contains(a[1], "!") {
-				allow_addition = !stringInSlice(a[1], cs.feats_list)
+				allow_addition = !stringInSlice(a[1], cs.Feats_list)
 				break
 			}
-			allow_addition = stringInSlice(a[1], cs.feats_list)
+			allow_addition = stringInSlice(a[1], cs.Feats_list)
 		}
 
 	}
 
 	if allow_addition {
-		cs.feats_list = append(cs.feats_list, feat.Name)
+		cs.Feats_list = append(cs.Feats_list, feat.Name)
 		fmt.Printf("Added feat: %s\n", feat.Name)
 		return true
 	}
@@ -556,7 +558,7 @@ func improve_ability_score_random(cs *Character_Sheet) {
 		asl := []string{"cha", "con", "dex", "itl", "str", "wis"}
 		abs := asl[index]
 		if picked != abs {
-			cs.char_ability_scores[abs] += 1
+			cs.Char_ability_scores[abs] += 1
 			fmt.Printf("Improved: %s\n", abs)
 
 			if picked != "" {
@@ -581,7 +583,7 @@ func improve_ability_score_optimized(cs *Character_Sheet) {
 		abs := asl[index]
 
 		if picked != abs {
-			cs.char_ability_scores[abs] += 1
+			cs.Char_ability_scores[abs] += 1
 			fmt.Printf("Improved: %s \n", abs)
 
 			if picked != "" {
@@ -614,14 +616,14 @@ func add_new_ability(cs *Character_Sheet, ability_name string) bool {
 	fmt.Printf("Adding Ability: %s\n", ability_name)
 
 	// check if feat is not already added
-	if !stringInSlice(ability_name, cs.stand.Abilities) {
+	if !stringInSlice(ability_name, cs.Stand.Abilities) {
 		fmt.Printf("Ability: %s - not configure for this stand, what went wrong???\n", ability_name)
 		return false
 	}
 
 	//check if prereq is possible
-	if !stringInSlice(cs.stand.Name, cs.abilities_list) {
-		cs.abilities_list = append(cs.abilities_list, ability_name)
+	if !stringInSlice(cs.Stand.Name, cs.Abilities_list) {
+		cs.Abilities_list = append(cs.Abilities_list, ability_name)
 		fmt.Printf("Added ability: %s\n", ability_name)
 		return true
 	} else {
@@ -632,8 +634,8 @@ func add_new_ability(cs *Character_Sheet, ability_name string) bool {
 
 func add_class_features(cs *Character_Sheet) {
 	// luc = level up chart
-	luc := cs.stand.LevelChart
-	level := cs.level - 1
+	luc := cs.Stand.LevelChart
+	level := cs.Level - 1
 
 	level_row := strings.Split(luc[level], ";")
 
@@ -668,7 +670,7 @@ func add_class_features(cs *Character_Sheet) {
 				level_to_pick_from, _ := strconv.Atoi(levels[index])
 
 				fmt.Printf("Picking Ability from level: %d\n", level_to_pick_from)
-				tlr := strings.Split(cs.stand.LevelChart[level_to_pick_from-1], ";")
+				tlr := strings.Split(cs.Stand.LevelChart[level_to_pick_from-1], ";")
 
 				ability := strings.Split(tlr[3], "|")
 
@@ -692,37 +694,38 @@ func add_class_features(cs *Character_Sheet) {
 func increase_hit_points(cs *Character_Sheet) {
 	fmt.Printf("Increasing hit points of character!\n")
 
-	fmt.Printf("Using hit dice: %s\n", cs.hit_dice)
-	current_hp := cs.hit_points
-	hp_dice := strings.Split(cs.hit_dice, "d")
+	fmt.Printf("Using hit dice: %s\n", cs.Stand.HitDice)
+	current_hp := cs.Hit_points
+	hp_dice := strings.Split(cs.Stand.HitDice, "d")
 	nof_dice, _ := strconv.Atoi(hp_dice[0])
 	nof_faces, _ := strconv.Atoi(hp_dice[1])
 
+	total := 0
 	for i := 0; i < nof_dice; i++ {
 		rand.Seed(time.Now().UnixNano())
-		hp_increase := rand.Intn(nof_faces)
-
-		if hp_increase == 0 {
-			hp_increase = 1
-		}
+		hp_increase := rand.Intn(nof_faces-1) + 1
 
 		fmt.Printf("Roll nr%d: %d\n", i+1, hp_increase)
 
-		cs.hit_points += hp_increase
+		total += hp_increase
 	}
 
-	fmt.Printf("Adding the Constitution modifier of: %d\n", cs.char_ability_modifiers["con"])
-	cs.hit_points += cs.char_ability_modifiers["con"]
+	cs.Hit_points_rolls = append(cs.Hit_points_rolls, total)
+	cs.Hit_points = 0
+	cs.Hit_points_rolls[0] = nof_faces
+	for i := 0; i < len(cs.Hit_points_rolls); i++ {
+		cs.Hit_points += cs.Hit_points_rolls[i] + cs.Char_ability_modifiers["con"]
+	}
 
-	fmt.Printf("Changed hit points from: %d to: %d\n", current_hp, cs.hit_points)
-
+	fmt.Printf("Changed hit points from: %d to: %d\n", current_hp, cs.Hit_points)
+	fmt.Printf("Rolls up untill now: %d\n", cs.Hit_points_rolls)
 }
 
 func increase_stand_points(cs *Character_Sheet) {
-	fmt.Printf("Increasing hit points of character!\n")
+	fmt.Printf("Increasing stand modifiers!\n")
 
-	fmt.Printf("Using level up dice: %s\n", cs.stand.OnLevelUp)
-	level_up_dice := strings.Split(cs.stand.OnLevelUp, "d")
+	fmt.Printf("Using level up dice: %s\n", cs.Stand.OnLevelUp)
+	level_up_dice := strings.Split(cs.Stand.OnLevelUp, "d")
 	nof_dice, _ := strconv.Atoi(level_up_dice[0])
 	nof_faces, _ := strconv.Atoi(level_up_dice[1])
 
@@ -740,8 +743,8 @@ func increase_stand_points(cs *Character_Sheet) {
 		total += add_this
 	}
 
-	fmt.Printf("Adding the level of the stand user: %d\n", cs.level)
-	total += cs.level
+	fmt.Printf("Adding the level of the stand user: %d\n", cs.Level)
+	total += cs.Level
 
 	fmt.Printf("Total points to spend: %d\n", total)
 
@@ -763,12 +766,12 @@ func increase_stand_points(cs *Character_Sheet) {
 		}
 	}
 
-	cs.stand_ability_scores["pow"] += values[0]
-	cs.stand_ability_scores["pre"] += values[1]
-	cs.stand_ability_scores["dur"] += values[2]
-	cs.stand_ability_scores["ran"] += values[3]
-	cs.stand_ability_scores["spe"] += values[4]
-	cs.stand_ability_scores["ngy"] += values[5]
+	cs.Stand_ability_scores["pow"] += values[0]
+	cs.Stand_ability_scores["pre"] += values[1]
+	cs.Stand_ability_scores["dur"] += values[2]
+	cs.Stand_ability_scores["ran"] += values[3]
+	cs.Stand_ability_scores["spe"] += values[4]
+	cs.Stand_ability_scores["ngy"] += values[5]
 
 	result := 0
 	for _, v := range values {
@@ -779,48 +782,48 @@ func increase_stand_points(cs *Character_Sheet) {
 		log.Panic("point pool was depleted?")
 	}
 
-	cs.stand_ability_modifiers = generate_ability_modifiers_stand(cs.stand_ability_scores)
+	cs.Stand_ability_modifiers = generate_ability_modifiers_stand(cs.Stand_ability_scores)
 	fmt.Printf("NEW: Stand Ability Scores:\n")
-	fmt.Printf("pow: %d   \t modifier: %d\n", cs.stand_ability_scores["pow"], cs.stand_ability_modifiers["pow"])
-	fmt.Printf("pre: %d   \t modifier: %d\n", cs.stand_ability_scores["pre"], cs.stand_ability_modifiers["pre"])
-	fmt.Printf("dur: %d   \t modifier: %d\n", cs.stand_ability_scores["dur"], cs.stand_ability_modifiers["dur"])
-	fmt.Printf("ran: %d   \t modifier: %d\n", cs.stand_ability_scores["ran"], cs.stand_ability_modifiers["ran"])
-	fmt.Printf("spe: %d   \t modifier: %d\n", cs.stand_ability_scores["spe"], cs.stand_ability_modifiers["spe"])
-	fmt.Printf("ngy: %d   \t modifier: %d\n", cs.stand_ability_scores["ngy"], cs.stand_ability_modifiers["ngy"])
+	fmt.Printf("pow: %d   \t modifier: %d\n", cs.Stand_ability_scores["pow"], cs.Stand_ability_modifiers["pow"])
+	fmt.Printf("pre: %d   \t modifier: %d\n", cs.Stand_ability_scores["pre"], cs.Stand_ability_modifiers["pre"])
+	fmt.Printf("dur: %d   \t modifier: %d\n", cs.Stand_ability_scores["dur"], cs.Stand_ability_modifiers["dur"])
+	fmt.Printf("ran: %d   \t modifier: %d\n", cs.Stand_ability_scores["ran"], cs.Stand_ability_modifiers["ran"])
+	fmt.Printf("spe: %d   \t modifier: %d\n", cs.Stand_ability_scores["spe"], cs.Stand_ability_modifiers["spe"])
+	fmt.Printf("ngy: %d   \t modifier: %d\n", cs.Stand_ability_scores["ngy"], cs.Stand_ability_modifiers["ngy"])
 }
 
 func level_up(cs *Character_Sheet) {
 	fmt.Print("============= level up! ================\n")
-	cs.level++
+	cs.Level++
 
 	// luc = level up chart
-	luc := cs.stand.LevelChart
-	level := cs.level - 1
+	luc := cs.Stand.LevelChart
+	level := cs.Level - 1
 
 	println(luc[level])
 
 	level_row := strings.Split(luc[level], ";")
-	cs.proficiency_bonus, _ = strconv.Atoi(level_row[1])
+	cs.Proficiency_bonus, _ = strconv.Atoi(level_row[1])
 	nof_feat, _ := strconv.Atoi(level_row[2])
 
-	fmt.Printf("level: %d | prof_bonus: %d | nof_feat: %s | class_features: %s | ab_dice: %s\n", cs.level, cs.proficiency_bonus, level_row[2], level_row[3], level_row[4])
+	fmt.Printf("level: %d | prof_bonus: %d | nof_feat: %s | class_features: %s | ab_dice: %s\n", cs.Level, cs.Proficiency_bonus, level_row[2], level_row[3], level_row[4])
 
-	cs.skill_pro = generate_passion_proficiencies(cs.passion, cs.char_ability_modifiers, cs.proficiency_bonus)
+	cs.Skill_pro = generate_passion_proficiencies(cs.Passion, cs.Char_ability_modifiers, cs.Proficiency_bonus)
 
 	//add feats
-	nof_feat_to_add := nof_feat - len(cs.feats_list)
+	nof_feat_to_add := nof_feat - len(cs.Feats_list)
 	for i := 0; i < nof_feat_to_add; i++ {
 		add_feat(cs, "")
 	}
 
 	// parse the table kinda :)
-	if cs.level < 15 {
+	if cs.Level < 15 {
 		add_class_features(cs)
 	}
 
 	// set new attack dice on level 11
-	if cs.level == 11 {
-		cs.stand.AttackDice = cs.stand.AttackDicePastLevelEleven
+	if cs.Level == 11 {
+		cs.Stand.AttackDice = cs.Stand.AttackDicePastLevelEleven
 	}
 
 	// increase hit points
@@ -831,118 +834,133 @@ func level_up(cs *Character_Sheet) {
 
 	//change ability dice
 	ab_dice_new := level_row[4]
-	ab_dice_old := cs.ability_dice
-	nof_faces := strings.Split(cs.ability_dice, "d")[1]
-	cs.ability_dice = strings.ReplaceAll(ab_dice_new, "x", nof_faces)
-	fmt.Printf("Ability Dice Increased from: %s to: %s\n", ab_dice_old, cs.ability_dice)
+	ab_dice_old := cs.Ability_dice
+	nof_faces := strings.Split(cs.Ability_dice, "d")[1]
+	cs.Ability_dice = strings.ReplaceAll(ab_dice_new, "x", nof_faces)
+	fmt.Printf("Ability Dice Increased from: %s to: %s\n", ab_dice_old, cs.Ability_dice)
 
 	print_character_sheet(*cs)
 }
 
 func print_character_sheet(character_sheet Character_Sheet) {
-	fmt.Printf("============= Character Sheet Level: %d ================\n", character_sheet.level)
-	for i := 0; i < len(character_sheet.skill_pro); i++ {
-		sp := character_sheet.skill_pro[i]
-		fmt.Printf("p:%d - %s (%s): %d \n", sp.level, sp.skill_name, sp.stat_type, sp.value)
+	fmt.Printf("============= Character Sheet Level: %d ================\n", character_sheet.Level)
+	for i := 0; i < len(character_sheet.Skill_pro); i++ {
+		sp := character_sheet.Skill_pro[i]
+		fmt.Printf("p:%d - %s (%s): %d \n", sp.Level, sp.Skill_name, sp.Stat_type, sp.Value)
 	}
 
-	fmt.Printf("proficiency bonus: %d\n", character_sheet.proficiency_bonus)
-	fmt.Printf("Passions: %s\n", character_sheet.passion.Name)
-	fmt.Printf("Stand Type: %s\n", character_sheet.stand.Name)
-	fmt.Printf("Ability Dice: %s\n", character_sheet.ability_dice)
+	fmt.Printf("proficiency bonus: %d\n", character_sheet.Proficiency_bonus)
+	fmt.Printf("Passions: %s\n", character_sheet.Passion.Name)
+	fmt.Printf("Stand Type: %s\n", character_sheet.Stand.Name)
+	fmt.Printf("Ability Dice: %s\n", character_sheet.Ability_dice)
 
 	fmt.Printf("Ability Score:\n")
-	fmt.Printf("cha: %d   \t modifiers: %d \n", character_sheet.char_ability_scores["cha"], character_sheet.char_ability_modifiers["cha"])
-	fmt.Printf("con: %d   \t modifiers: %d \n", character_sheet.char_ability_scores["con"], character_sheet.char_ability_modifiers["con"])
-	fmt.Printf("dex: %d   \t modifiers: %d \n", character_sheet.char_ability_scores["dex"], character_sheet.char_ability_modifiers["dex"])
-	fmt.Printf("itl: %d   \t modifiers: %d \n", character_sheet.char_ability_scores["itl"], character_sheet.char_ability_modifiers["itl"])
-	fmt.Printf("str: %d   \t modifiers: %d \n", character_sheet.char_ability_scores["str"], character_sheet.char_ability_modifiers["str"])
-	fmt.Printf("wis: %d   \t modifiers: %d \n", character_sheet.char_ability_scores["wis"], character_sheet.char_ability_modifiers["wis"])
+	fmt.Printf("cha: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["cha"], character_sheet.Char_ability_modifiers["cha"])
+	fmt.Printf("con: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["con"], character_sheet.Char_ability_modifiers["con"])
+	fmt.Printf("dex: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["dex"], character_sheet.Char_ability_modifiers["dex"])
+	fmt.Printf("itl: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["itl"], character_sheet.Char_ability_modifiers["itl"])
+	fmt.Printf("str: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["str"], character_sheet.Char_ability_modifiers["str"])
+	fmt.Printf("wis: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["wis"], character_sheet.Char_ability_modifiers["wis"])
 
 	fmt.Printf("Saving Throws:\n")
-	fmt.Printf("cha: %d   \t is_poficient: %d \n", character_sheet.saving_throws["cha"].value, character_sheet.saving_throws["cha"].level)
-	fmt.Printf("con: %d   \t is_poficient: %d \n", character_sheet.saving_throws["con"].value, character_sheet.saving_throws["con"].level)
-	fmt.Printf("dex: %d   \t is_poficient: %d \n", character_sheet.saving_throws["dex"].value, character_sheet.saving_throws["dex"].level)
-	fmt.Printf("itl: %d   \t is_poficient: %d \n", character_sheet.saving_throws["itl"].value, character_sheet.saving_throws["itl"].level)
-	fmt.Printf("str: %d   \t is_poficient: %d \n", character_sheet.saving_throws["str"].value, character_sheet.saving_throws["str"].level)
-	fmt.Printf("wis: %d   \t is_poficient: %d \n", character_sheet.saving_throws["wis"].value, character_sheet.saving_throws["wis"].level)
+	fmt.Printf("cha: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["cha"].Value, character_sheet.Saving_throws["cha"].Level)
+	fmt.Printf("con: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["con"].Value, character_sheet.Saving_throws["con"].Level)
+	fmt.Printf("dex: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["dex"].Value, character_sheet.Saving_throws["dex"].Level)
+	fmt.Printf("itl: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["itl"].Value, character_sheet.Saving_throws["itl"].Level)
+	fmt.Printf("str: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["str"].Value, character_sheet.Saving_throws["str"].Level)
+	fmt.Printf("wis: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["wis"].Value, character_sheet.Saving_throws["wis"].Level)
 
 	fmt.Printf("Stand Ability Scores:\n")
-	fmt.Printf("pow: %d   \t modifier: %d\n", character_sheet.stand_ability_scores["pow"], character_sheet.stand_ability_modifiers["pow"])
-	fmt.Printf("pre: %d   \t modifier: %d\n", character_sheet.stand_ability_scores["pre"], character_sheet.stand_ability_modifiers["pre"])
-	fmt.Printf("dur: %d   \t modifier: %d\n", character_sheet.stand_ability_scores["dur"], character_sheet.stand_ability_modifiers["dur"])
-	fmt.Printf("ran: %d   \t modifier: %d\n", character_sheet.stand_ability_scores["ran"], character_sheet.stand_ability_modifiers["ran"])
-	fmt.Printf("spe: %d   \t modifier: %d\n", character_sheet.stand_ability_scores["spe"], character_sheet.stand_ability_modifiers["spe"])
-	fmt.Printf("ngy: %d   \t modifier: %d\n", character_sheet.stand_ability_scores["ngy"], character_sheet.stand_ability_modifiers["ngy"])
+	fmt.Printf("pow: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["pow"], character_sheet.Stand_ability_modifiers["pow"])
+	fmt.Printf("pre: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["pre"], character_sheet.Stand_ability_modifiers["pre"])
+	fmt.Printf("dur: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["dur"], character_sheet.Stand_ability_modifiers["dur"])
+	fmt.Printf("ran: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["ran"], character_sheet.Stand_ability_modifiers["ran"])
+	fmt.Printf("spe: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["spe"], character_sheet.Stand_ability_modifiers["spe"])
+	fmt.Printf("ngy: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["ngy"], character_sheet.Stand_ability_modifiers["ngy"])
 
-	fmt.Printf("char_AC: %d\n", character_sheet.armor_class)
-	fmt.Printf("stand_AC: %d\n", character_sheet.stand_ac)
-	fmt.Printf("stand_movement: %d\n", character_sheet.stand_movement)
-	fmt.Printf("stand_attack_per_turn: %d\n", character_sheet.stand_attack_per_turn)
-	fmt.Printf("stand_damage_reduction: %d\n", character_sheet.stand_damage_reduction)
-	fmt.Printf("initiative: %d\n", character_sheet.initiative)
-	fmt.Printf("hit_dice: %s\n", character_sheet.stand.AttackDice)
-	fmt.Printf("stand_dc: %d\n", character_sheet.stand_dc)
-	fmt.Printf("hit_points: %d\n", character_sheet.hit_points)
+	fmt.Printf("char_AC: %d\n", character_sheet.Armor_class)
+	fmt.Printf("stand_AC: %d\n", character_sheet.Stand_ac)
+	fmt.Printf("stand_movement: %d\n", character_sheet.Stand_movement)
+	fmt.Printf("stand_attack_per_turn: %d\n", character_sheet.Stand_attack_per_turn)
+	fmt.Printf("stand_damage_reduction: %d\n", character_sheet.Stand_damage_reduction)
+	fmt.Printf("initiative: %d\n", character_sheet.Initiative)
+	fmt.Printf("hit_dice: %s\n", character_sheet.Stand.HitDice)
+	fmt.Printf("stand_dc: %d\n", character_sheet.Stand_dc)
+	fmt.Printf("hit_points: %d\n", character_sheet.Hit_points)
 }
 
 func generate_character_statistics(character_sheet *Character_Sheet, recalc_starters bool) {
 	fmt.Printf("============= Generate Character Sheet ================\n")
 	// Calculate generate ability modifiers again :)
-	character_sheet.char_ability_modifiers = generate_ability_modifiers_character(character_sheet.char_ability_scores)
-	character_sheet.saving_throws = generate_passion_saving_throws(character_sheet.passion, character_sheet.char_ability_modifiers, character_sheet.proficiency_bonus)
+	character_sheet.Char_ability_modifiers = generate_ability_modifiers_character(character_sheet.Char_ability_scores)
+	character_sheet.Saving_throws = generate_passion_saving_throws(character_sheet.Passion, character_sheet.Char_ability_modifiers, character_sheet.Proficiency_bonus)
 
 	//generate_character_skill_proficiencies()
-	character_sheet.skill_pro = generate_passion_proficiencies(character_sheet.passion, character_sheet.char_ability_modifiers, character_sheet.proficiency_bonus)
+	character_sheet.Skill_pro = generate_passion_proficiencies(character_sheet.Passion, character_sheet.Char_ability_modifiers, character_sheet.Proficiency_bonus)
 
 	if recalc_starters == true {
 		// Calculate stant ability scores
-		character_sheet.stand_ability_scores = generate_ability_scores_stands(character_sheet.stand, character_sheet.char_ability_scores)
+		character_sheet.Stand_ability_scores = generate_ability_scores_stands(character_sheet.Stand, character_sheet.Char_ability_scores)
 		// Calculate stant ability modifiers
-		character_sheet.stand_ability_modifiers = generate_ability_modifiers_stand(character_sheet.stand_ability_scores)
+		character_sheet.Stand_ability_modifiers = generate_ability_modifiers_stand(character_sheet.Stand_ability_scores)
 	}
 
 	// Calculate some small things like AC
-	character_sheet.armor_class = calculate_char_AC(character_sheet.char_ability_modifiers)
-	character_sheet.stand_ac = calculate_stand_AC(character_sheet.stand_ability_modifiers)
-	character_sheet.stand_movement = character_sheet.stand_ability_modifiers["spe"] * 2
-	character_sheet.stand_attack_per_turn = character_sheet.stand_ability_scores["spe"]/50 + 1
-	character_sheet.stand_damage_reduction = character_sheet.stand_ability_scores["dur"] / 10
-	character_sheet.initiative = character_sheet.char_ability_modifiers["dex"] + character_sheet.char_ability_modifiers["wis"]
-	character_sheet.hit_dice = character_sheet.stand.AttackDice
-	character_sheet.stand_dc = 8 + character_sheet.proficiency_bonus + character_sheet.char_ability_modifiers["cha"]
+	character_sheet.Armor_class = calculate_char_AC(character_sheet.Char_ability_modifiers)
+	character_sheet.Stand_ac = calculate_stand_AC(character_sheet.Stand_ability_modifiers)
+	character_sheet.Stand_movement = character_sheet.Stand_ability_modifiers["spe"] * 2
+	character_sheet.Stand_attack_per_turn = character_sheet.Stand_ability_scores["spe"]/50 + 1
+	character_sheet.Stand_damage_reduction = character_sheet.Stand_ability_scores["dur"] / 10
+	character_sheet.Initiative = character_sheet.Char_ability_modifiers["dex"] + character_sheet.Char_ability_modifiers["wis"]
+	character_sheet.Stand_dc = 8 + character_sheet.Proficiency_bonus + character_sheet.Char_ability_modifiers["cha"]
 
 	if recalc_starters == true {
 		// Calculate starting hit points
-		character_sheet.hit_points = 10 + character_sheet.char_ability_modifiers["con"]
+		character_sheet.Hit_points = 10 + character_sheet.Char_ability_modifiers["con"]
+	}
+}
+
+func explort_character_to_yaml(cs Character_Sheet) {
+	file, err := os.OpenFile(strings.ReplaceAll(cs.Name, " ", "_")+".yaml", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0600)
+	if err != nil {
+		log.Fatalf("error opening/creating file: %v", err)
+	}
+	defer file.Close()
+
+	enc := yaml.NewEncoder(file)
+
+	err = enc.Encode(cs)
+	if err != nil {
+		log.Fatalf("error encoding: %v", err)
 	}
 }
 
 func main() {
 	// Create character sheet
 	var character_sheet Character_Sheet
-	character_sheet.level = 0
+	character_sheet.Name = "template name"
+	character_sheet.Level = 0
 	// set base proficiency_bonus
-	character_sheet.proficiency_bonus = 2
+	character_sheet.Proficiency_bonus = 2
 
 	////////////////////////////////////////////////////////////////////////////////////////
 	//START OF RANDOM STUFFS
 	////////////////////////////////////////////////////////////////////////////////////////
 
 	// Roll and assign Stats
-	character_sheet.char_ability_scores = generate_ability_scores_character()
+	character_sheet.Char_ability_scores = generate_ability_scores_character()
 	// pick the Characterʼs Passion
-	character_sheet.passion = select_passion()
+	character_sheet.Passion = select_passion()
 	// pick a class/stand type
-	character_sheet.stand = select_stand()
+	character_sheet.Stand = select_stand()
 	// pick ability
-	character_sheet.ability_dice = select_ability()
+	character_sheet.Ability_dice = select_ability()
 	//load all feats
-	character_sheet.feats = load_feats()
+	character_sheet.Feats = load_feats()
 	//load all abilities
-	character_sheet.abilities = load_abilities()
+	character_sheet.Abilities = load_abilities()
 	// Calculate passion bonusses
-	character_sheet.char_ability_scores = generate_passion_ability_score(character_sheet.passion, character_sheet.char_ability_scores)
+	character_sheet.Char_ability_scores = generate_passion_ability_score(character_sheet.Passion, character_sheet.Char_ability_scores)
 
 	////////////////////////////////////////////////////////////////////////////////////////
 	//END OF RANDOM STUFFS
@@ -953,6 +971,8 @@ func main() {
 	for i := 0; i < 20; i++ {
 		level_up(&character_sheet)
 	}
+
+	explort_character_to_yaml(character_sheet)
 
 	// 4. Find what Class(es) your character will be playing, add the abilities
 	// 5. Determine your characterʼs Maximum Hit Points, Armor Class, and Stand Armor Class (If Applicable)
