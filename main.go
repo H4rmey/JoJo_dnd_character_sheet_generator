@@ -1,25 +1,10 @@
 package main
 
 import (
-	"github.com/rivo/tview"
+	cg "main/character_generator"
 )
 
 func main() {
-	app := tview.NewApplication()
+	cg.StartBuildingCharacter()
 
-	form := tview.NewForm().
-		AddDropDown("Title", []string{"Mr.", "Ms.", "Mrs.", "Dr.", "Prof."}, 0, nil).
-		AddInputField("First name", "", 20, nil, nil).
-		AddInputField("Last name", "", 20, nil, nil).
-		AddCheckbox("Age 18+", false, nil).
-		AddPasswordField("Password", "", 10, '*', nil).
-		AddButton("Save", nil).
-		AddButton("Quit", func() {
-			app.Stop()
-		})
-	form.SetBorder(true).SetTitle("Enter some data").SetTitleAlign(tview.AlignLeft)
-
-	if err := app.SetRoot(form, true).EnableMouse(true).Run(); err != nil {
-		panic(err)
-	}
 }

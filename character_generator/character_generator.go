@@ -206,7 +206,7 @@ func generate_passion_proficiencies(passion Passion, ability_modifiers_char map[
 }
 
 func select_passion() Passion {
-	file, err := ioutil.ReadFile("./yaml/passions.yaml")
+	file, err := ioutil.ReadFile("../yaml/passions.yaml")
 
 	if err != nil {
 		log.Fatal(err)
@@ -250,7 +250,7 @@ func generate_ability_modifiers_stand(stand_ability_scores map[string]int) map[s
 }
 
 func select_stand() Stand {
-	file, err := ioutil.ReadFile("./yaml/stand_types.yaml")
+	file, err := ioutil.ReadFile("../yaml/stand_types.yaml")
 
 	if err != nil {
 		log.Fatal(err)
@@ -312,7 +312,7 @@ func calculate_stand_AC(am map[string]int) int {
 }
 
 func LoadAbilities() []Abilities {
-	file, err := ioutil.ReadFile("./yaml/abilities.yaml")
+	file, err := ioutil.ReadFile("../yaml/abilities.yaml")
 
 	if err != nil {
 		log.Fatal(err)
@@ -328,7 +328,7 @@ func LoadAbilities() []Abilities {
 }
 
 func LoadFeats() []Feat {
-	file, err := ioutil.ReadFile("./yaml/feats.yaml")
+	file, err := ioutil.ReadFile("../yaml/feats.yaml")
 
 	if err != nil {
 		log.Fatal(err)

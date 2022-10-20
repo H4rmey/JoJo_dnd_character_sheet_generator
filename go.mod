@@ -1,4 +1,4 @@
-module generator.go
+module main
 
 go 1.19
 
