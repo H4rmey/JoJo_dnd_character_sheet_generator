@@ -1,10 +1,22 @@
-package main
+package character_generator
 
 import (
 	"github.com/rivo/tview"
 )
 
-func main() {
+func GetAllPassions() {
+}
+
+func GetAllStands() {
+}
+
+func GetAllAbilities() {
+}
+
+func GetAllFeats() {
+}
+
+func StartBuildingCharacter() {
 	app := tview.NewApplication()
 
 	form := tview.NewForm().

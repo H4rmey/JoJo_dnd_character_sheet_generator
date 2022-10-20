@@ -1,4 +1,4 @@
-package main
+package character_generator
 
 import (
 	"fmt"
@@ -13,127 +13,6 @@ import (
 
 	"gopkg.in/yaml.v3"
 )
-
-type Proficiency struct {
-	Level      int    `yaml:"level"`
-	Value      int    `yaml:"value"`
-	Stat_type  string `yaml:"stat_type"`
-	Skill_name string `yaml:"skill_name"`
-}
-
-// Stand structs
-type Yaml2Stand struct {
-	Stands []Stand `yaml:"stands"`
-}
-
-type Stand struct {
-	AttackDice                string            `yaml:"attack_dice"`
-	AttackDiceHigherLevel     string            `yaml:"attack_dice_higher_level"`
-	HitDice                   string            `yaml:"hit_dice"`
-	OnLevelUp                 string            `yaml:"on_level_up"`
-	Name                      string            `yaml:"name"`
-	ModificationChart         ModificationChart `yaml:"modification_chart"`
-	Description               string            `yaml:"description"`
-	Note                      string            `yaml:"note"`
-	Special                   []int             `yaml:"special"`
-	AttackDicePastLevelEleven string            `yaml:"attack_dice_past_level_eleven"`
-	LevelChart                []string          `yaml:"levels"`
-	Abilities                 []string          `yaml:"abilities"`
-}
-
-type ModificationChart struct {
-	Str int `yaml:"str"`
-	Dex int `yaml:"dex"`
-	Con int `yaml:"con"`
-	Itl int `yaml:"itl"`
-	Wis int `yaml:"wis"`
-	Cha int `yaml:"cha"`
-}
-
-// Passion Structs
-type Yaml2Passion struct {
-	Passions []Passion `yaml:"Passions"`
-}
-
-type Passion struct {
-	Name        string `yaml:"name"`
-	Description string `yaml:"description"`
-	Examples    string `yaml:"examples"`
-	Traits      Traits `yaml:"traits"`
-}
-
-type Traits struct {
-	Proficiencies      []string      `yaml:"proficiencies"`
-	ProficienciesExtra string        `yaml:"proficiencies_extra"`
-	Languages          int           `yaml:"languages"`
-	Extra              string        `yaml:"extra"`
-	SavingThrows       []string      `yaml:"saving_throws"`
-	AbilityScores      AbilityScores `yaml:"ability_scores"`
-}
-
-type AbilityScores struct {
-	Str int `yaml:"str"`
-	Dex int `yaml:"dex"`
-	Con int `yaml:"con"`
-	Itl int `yaml:"itl"`
-	Wis int `yaml:"wis"`
-	Cha int `yaml:"cha"`
-}
-
-// Feat Structs
-type Yaml2Feats struct {
-	Feats []Feat `yaml:"feats"`
-}
-
-type Feat struct {
-	Name        string   `yaml:"name"`
-	Prereq      string   `yaml:"prereq"`
-	Description string   `yaml:"description"`
-	Effects     []string `yaml:"effects"`
-}
-
-// Abilities Structs
-type Yaml2Abilities struct {
-	Abilities []Abilities `yaml:"abilities"`
-}
-
-type Abilities struct {
-	Name    string   `yaml:"name"`
-	Text    string   `yaml:"text"`
-	Allowed []string `yaml:"allowed"`
-}
-
-// Character_Sheet
-type Character_Sheet struct {
-	Name                    string                 `yaml:"name"`
-	Ability_dice            string                 `yaml:"ability_dice"`
-	Hit_dice                string                 `yaml:"hit_dice"`
-	Proficiency_bonus       int                    `yaml:"proficiency_bonus"`
-	Stand_damage_reduction  int                    `yaml:"stand_damage_reduction"`
-	Stand_movement          int                    `yaml:"stand_movment"`
-	Stand_attack_per_turn   int                    `yaml:"stand_attack_per_turn"`
-	Stand_dc                int                    `yaml:"stand_dc"`
-	Stand_ac                int                    `yaml:"stand_ac"`
-	Hit_points              int                    `yaml:"hit_points"`
-	Armor_class             int                    `yaml:"armor_class"`
-	Initiative              int                    `yaml:"initiative"`
-	Passive_perception      int                    `yaml:"passive_perception"`
-	Movement                int                    `yaml:"movement"`
-	Level                   int                    `yaml:"level"`
-	Feats_list              []string               `yaml:"feats_list"`
-	Abilities_list          []string               `yaml:"abilities_list"`
-	Stand                   Stand                  `yaml:"stand"`
-	Passion                 Passion                `yaml:"passion"`
-	Skill_pro               []Proficiency          `yaml:"skill_pro"`
-	Saving_throws           map[string]Proficiency `yaml:"saving_throws"`
-	Char_ability_scores     map[string]int         `yaml:"char_ability_scores"`
-	Char_ability_modifiers  map[string]int         `yaml:"char_ability_modifiers"`
-	Stand_ability_scores    map[string]int         `yaml:"stand_ability_scores"`
-	Stand_ability_modifiers map[string]int         `yaml:"stand_ability_modifiers"`
-	Feats                   []Feat                 `yaml:"feats"`
-	Abilities               []Abilities            `yaml:"abilities"`
-	Hit_points_rolls        []int                  `yaml:"hit_points_rolls"`
-}
 
 // Generates the stats of a character
 func generate_ability_scores_character() map[string]int {
@@ -186,23 +65,23 @@ func generate_ability_scores_character() map[string]int {
 	return stats_char
 }
 
-func generate_modifier_char(value int) int {
+func GenerateModifierChar(value int) int {
 	return int(math.Floor((float64(value) - 10.0) / 2.0))
 }
 
-func generate_modifier_stand(value int) int {
+func GenerateModifierStand(value int) int {
 	return value / 10
 }
 
 func generate_ability_modifiers_character(ability_scores map[string]int) map[string]int {
 	ability_modifiers_char := make(map[string]int, 6)
 
-	ability_modifiers_char["cha"] = generate_modifier_char(ability_scores["cha"])
-	ability_modifiers_char["con"] = generate_modifier_char(ability_scores["con"])
-	ability_modifiers_char["dex"] = generate_modifier_char(ability_scores["dex"])
-	ability_modifiers_char["itl"] = generate_modifier_char(ability_scores["itl"])
-	ability_modifiers_char["str"] = generate_modifier_char(ability_scores["str"])
-	ability_modifiers_char["wis"] = generate_modifier_char(ability_scores["wis"])
+	ability_modifiers_char["cha"] = GenerateModifierChar(ability_scores["cha"])
+	ability_modifiers_char["con"] = GenerateModifierChar(ability_scores["con"])
+	ability_modifiers_char["dex"] = GenerateModifierChar(ability_scores["dex"])
+	ability_modifiers_char["itl"] = GenerateModifierChar(ability_scores["itl"])
+	ability_modifiers_char["str"] = GenerateModifierChar(ability_scores["str"])
+	ability_modifiers_char["wis"] = GenerateModifierChar(ability_scores["wis"])
 
 	return ability_modifiers_char
 }
@@ -343,8 +222,6 @@ func select_passion() Passion {
 	nof_passions := len(yaml_passions.Passions)
 	char_passion := rand.Intn(nof_passions)
 
-	//char_passion = 0 //TODO: remove this line!
-
 	return yaml_passions.Passions[char_passion]
 }
 
@@ -362,12 +239,12 @@ func generate_ability_scores_stands(stand Stand, ability_scores map[string]int) 
 
 func generate_ability_modifiers_stand(stand_ability_scores map[string]int) map[string]int {
 	stand_ability_modifiers := map[string]int{
-		"pow": generate_modifier_stand(stand_ability_scores["pow"]),
-		"pre": generate_modifier_stand(stand_ability_scores["pre"]),
-		"dur": generate_modifier_stand(stand_ability_scores["dur"]),
-		"ran": generate_modifier_stand(stand_ability_scores["ran"]),
-		"spe": generate_modifier_stand(stand_ability_scores["spe"]),
-		"ngy": generate_modifier_stand(stand_ability_scores["ngy"]),
+		"pow": GenerateModifierStand(stand_ability_scores["pow"]),
+		"pre": GenerateModifierStand(stand_ability_scores["pre"]),
+		"dur": GenerateModifierStand(stand_ability_scores["dur"]),
+		"ran": GenerateModifierStand(stand_ability_scores["ran"]),
+		"spe": GenerateModifierStand(stand_ability_scores["spe"]),
+		"ngy": GenerateModifierStand(stand_ability_scores["ngy"]),
 	}
 	return stand_ability_modifiers
 }
@@ -434,7 +311,7 @@ func calculate_stand_AC(am map[string]int) int {
 	return highest
 }
 
-func load_abilities() []Abilities {
+func LoadAbilities() []Abilities {
 	file, err := ioutil.ReadFile("./yaml/abilities.yaml")
 
 	if err != nil {
@@ -450,7 +327,7 @@ func load_abilities() []Abilities {
 	return yaml_abilities.Abilities
 }
 
-func load_feats() []Feat {
+func LoadFeats() []Feat {
 	file, err := ioutil.ReadFile("./yaml/feats.yaml")
 
 	if err != nil {
@@ -475,7 +352,7 @@ func stringInSlice(a string, list []string) bool {
 	return false
 }
 
-func add_feat(cs *Character_Sheet, feat_name string) bool {
+func AddFeat(cs *Character_Sheet, feat_name string) bool {
 	feats := cs.Feats
 
 	var feat Feat
@@ -597,7 +474,6 @@ func improve_ability_score_optimized(cs *Character_Sheet) {
 }
 
 func add_new_ability(cs *Character_Sheet, ability_name string) bool {
-
 	if strings.Contains(ability_name, "|") {
 		fmt.Printf("Found multiple abilities, picking random from: %s\n", ability_name)
 		abilities := strings.Split(ability_name, "|")
@@ -611,7 +487,7 @@ func add_new_ability(cs *Character_Sheet, ability_name string) bool {
 	if strings.Contains(ability_name, "feat") {
 		feat := strings.Split(ability_name, "=")[1]
 		fmt.Printf("Instead of ability, adding feat: %s\n", feat)
-		return add_feat(cs, feat)
+		return AddFeat(cs, feat)
 	}
 
 	if strings.Contains(ability_name, "") {
@@ -816,7 +692,7 @@ func level_up(cs *Character_Sheet) {
 	//add feats
 	nof_feat_to_add := nof_feat - len(cs.Feats_list)
 	for i := 0; i < nof_feat_to_add; i++ {
-		add_feat(cs, "")
+		AddFeat(cs, "")
 	}
 
 	// parse the table kinda :)
@@ -842,10 +718,10 @@ func level_up(cs *Character_Sheet) {
 	cs.Ability_dice = strings.ReplaceAll(ab_dice_new, "x", nof_faces)
 	fmt.Printf("Ability Dice Increased from: %s to: %s\n", ab_dice_old, cs.Ability_dice)
 
-	print_character_sheet(*cs)
+	PrintCharacterSheet(*cs)
 }
 
-func print_character_sheet(character_sheet Character_Sheet) {
+func PrintCharacterSheet(character_sheet Character_Sheet) {
 	fmt.Printf("============= Character Sheet Level: %d ================\n", character_sheet.Level)
 	for i := 0; i < len(character_sheet.Skill_pro); i++ {
 		sp := character_sheet.Skill_pro[i]
@@ -923,7 +799,7 @@ func generate_character_statistics(character_sheet *Character_Sheet, recalc_star
 	}
 }
 
-func explort_character_to_yaml(cs Character_Sheet) {
+func ExportCharacterToYaml(cs Character_Sheet) {
 	file, err := os.OpenFile(strings.ReplaceAll(cs.Name, " ", "_")+".yaml", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0600)
 	if err != nil {
 		log.Fatalf("error opening/creating file: %v", err)
@@ -936,4 +812,43 @@ func explort_character_to_yaml(cs Character_Sheet) {
 	if err != nil {
 		log.Fatalf("error encoding: %v", err)
 	}
+}
+
+func GenerateRandomCharacter() {
+	//	// Create character sheet
+	var character_sheet Character_Sheet
+	character_sheet.Name = "template name"
+	character_sheet.Level = 0
+	character_sheet.Proficiency_bonus = 2
+
+	////////////////////////////////////////////////////////////////////////////////////////
+	//START OF RANDOM STUFFS
+	////////////////////////////////////////////////////////////////////////////////////////
+
+	// Roll and assign Stats
+	character_sheet.Char_ability_scores = generate_ability_scores_character()
+	// pick the Characterʼs Passion
+	character_sheet.Passion = select_passion()
+	// pick a class/stand type
+	character_sheet.Stand = select_stand()
+	// pick ability
+	character_sheet.Ability_dice = select_ability()
+	//load all feats
+	character_sheet.Feats = LoadFeats()
+	//load all abilities
+	character_sheet.Abilities = LoadAbilities()
+	// Calculate passion bonusses
+	character_sheet.Char_ability_scores = generate_passion_ability_score(character_sheet.Passion, character_sheet.Char_ability_scores)
+
+	////////////////////////////////////////////////////////////////////////////////////////
+	//END OF RANDOM STUFFS
+	////////////////////////////////////////////////////////////////////////////////////////
+
+	generate_character_statistics(&character_sheet, true)
+	PrintCharacterSheet(character_sheet)
+	for i := 0; i < 20; i++ {
+		level_up(&character_sheet)
+	}
+
+	ExportCharacterToYaml(character_sheet)
 }
