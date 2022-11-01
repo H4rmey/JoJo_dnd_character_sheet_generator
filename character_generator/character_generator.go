@@ -249,6 +249,22 @@ func generate_ability_modifiers_stand(stand_ability_scores map[string]int) map[s
 	return stand_ability_modifiers
 }
 
+func LoadStands() Yaml2Stand {
+	file, err := ioutil.ReadFile("./yaml/stand_types.yaml")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var yaml_stands Yaml2Stand
+	error := yaml.Unmarshal([]byte(file), &yaml_stands)
+	if error != nil {
+		log.Fatal(err)
+	}
+
+	return yaml_stands
+}
+
 func select_stand() Stand {
 	file, err := ioutil.ReadFile("../yaml/stand_types.yaml")
 

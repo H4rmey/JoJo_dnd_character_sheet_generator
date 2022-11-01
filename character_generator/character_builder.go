@@ -4,6 +4,8 @@ import (
 	"io/ioutil"
 	"log"
 
+	"strconv"
+
 	"github.com/rivo/tview"
 	"gopkg.in/yaml.v3"
 )
@@ -108,24 +110,94 @@ func GetNameArrayFeats(data []Feat) []string {
 	return ret
 }
 
-func StartBuildingCharacter() {
-	app := tview.NewApplication()
+func StartCharacterBuildingGUI(cs *Character_Sheet, app *tview.Application) *tview.Pages {
+	pages := tview.NewPages()
 
+	pickStand := PickStand(cs)
+	pickPassion := PickPassion(cs)
+
+	pageList := []tview.Grid{
+		*pickStand,
+		*pickPassion,
+	}
+
+	for pageIndex := 0; pageIndex < len(pageList); pageIndex++ {
+		i := strconv.Itoa(pageIndex)
+		pages.AddPage(i, &pageList[pageIndex], false, pageIndex == 0)
+
+		buttonNext := tview.NewButton("Next -->").SetSelectedFunc(func() {
+			i = strconv.Itoa((pageIndex + 1) % len(pageList))
+			pages.SwitchToPage(i)
+		})
+
+		pageList[pageIndex].AddItem(buttonNext, 2, 0, 1, 1, 10, 10, true)
+	}
+
+	return pages
+}
+
+func PickPassion(cs *Character_Sheet) *tview.Grid {
 	stands_list := GetNameArrayStands(GetAllStands().Stands)
 
-	form := tview.NewForm().AddDropDown("Class", stands_list, 0, nil)
+	textView := tview.NewTextView()
+	textView.SetBorderPadding(1, 1, 1, 1)
+	textView.SetWordWrap(true)
 
-	form.AddInputField("olivier", "", 20, nil, nil).
-		AddInputField("Last name", "", 20, nil, nil).
-		AddCheckbox("Age 18+", false, nil).
-		AddPasswordField("Password", "", 10, '*', nil).
-		AddButton("Save", nil).
-		AddButton("Quit", func() {
-			app.Stop()
-		})
-	form.SetBorder(true).SetTitle("Enter some data").SetTitleAlign(tview.AlignLeft)
+	form := tview.NewForm()
+	form.AddDropDown("Passion:", stands_list, 0, func(firstName string, value int) {
+		textView.SetText(cs.Stands[value].Description)
+	})
 
-	if err := app.SetRoot(form, true).EnableMouse(true).Run(); err != nil {
+	flex := tview.NewFlex()
+	flex.SetBorder(true).SetTitle("Select your stand type").SetTitleAlign(tview.AlignCenter)
+
+	grid := tview.NewGrid()
+	grid.AddItem(form, 0, 0, 1, 1, 10, 10, true)
+	grid.AddItem(textView, 1, 0, 1, 1, 10, 10, true)
+
+	return grid
+}
+
+func PickStand(cs *Character_Sheet) *tview.Grid {
+	stands_list := GetNameArrayStands(GetAllStands().Stands)
+
+	textView := tview.NewTextView()
+	textView.SetBorderPadding(1, 1, 1, 1)
+	textView.SetWordWrap(true)
+
+	form := tview.NewForm()
+	form.AddDropDown("Class", stands_list, 0, func(firstName string, value int) {
+		textView.SetText(cs.Stands[value].Description)
+	})
+
+	flex := tview.NewFlex()
+	flex.SetBorder(true).SetTitle("Select your stand type").SetTitleAlign(tview.AlignCenter)
+
+	grid := tview.NewGrid()
+	grid.AddItem(form, 0, 0, 1, 1, 10, 10, true)
+	grid.AddItem(textView, 1, 0, 1, 1, 10, 10, true)
+
+	return grid
+}
+
+func uiRun(app *tview.Application) {
+	if err := app.Run(); err != nil {
 		panic(err)
 	}
+}
+
+func StartBuildingCharacter() {
+	app := tview.NewApplication()
+	var cs Character_Sheet
+
+	cs.Stands = LoadStands().Stands
+
+	flex := PickStand(&cs)
+
+	//flex := StartCharacterBuildingGUI(&cs, app)
+	app.SetRoot(flex, true)
+	app.SetFocus(flex)
+	app.EnableMouse(true)
+
+	uiRun(app)
 }
