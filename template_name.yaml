@@ -1,62 +1,63 @@
 name: template name
-ability_dice: 10d10
+ability_dice: 3d6
 hit_dice: ""
-proficiency_bonus: 6
-stand_damage_reduction: 9
-stand_movment: 12
-stand_attack_per_turn: 2
-stand_dc: 13
-stand_ac: 25
-hit_points: 216
-armor_class: 17
-initiative: 4
+proficiency_bonus: 3
+stand_damage_reduction: 6
+stand_movment: 8
+stand_attack_per_turn: 1
+stand_dc: 14
+stand_ac: 20
+hit_points: 41
+armor_class: 13
+initiative: 0
 passive_perception: 0
 movement: 0
-level: 20
+level: 5
 feats_list:
-    - Natural Talent
-    - Hidden Assassin
-    - Evasive
-    - Level-Headed
-    - Deadly Accuracy
+    - Immense Impact
     - Interpreter
-abilities_list: []
+    - ""
+abilities_list:
+    - Programmed_Stand
+    - Stand_Marking
+    - Immense_Power
+    - Detached_Senses
 stand:
-    attack_dice: ""
-    attack_dice_higher_level: 2d10
-    hit_dice: 1d12
+    attack_dice: 1d8
+    attack_dice_higher_level: ""
+    hit_dice: 1d10
     on_level_up: 2d4
-    name: Power
+    name: Remote
     modification_chart:
-        str: 4
-        dex: 3
-        con: 3
-        itl: 1
-        wis: 4
+        str: 3
+        dex: 2
+        con: 4
+        itl: 5
+        wis: 3
         cha: 2
-    description: Power Stands are considered to be some of the most dangerous and powerful, due to their all around physical ability. Most opponents have no chance facing off against a Power type Stand user when within their spe. Their only weakness is their extremely short spe.
+    description: Remote-Type Stands are immensely powerful. Their Abilities and strength can often not be ignored. However, the users of these Stands often cannot control them, with their Stands instead automatically following a simple task. For example, attack the closest human until its breathing stops for 5 seconds, prevent anybody from entering a building, use your ability on anyone who opens a door, attack anyone who steps into a shadow, etc. These Stands, while often powerful indeed, have very easily exploitable weaknesses due to the simple nature of how they function.
     note: ""
     special:
         - 10
         - 100
         - 250
         - 500
-    attack_dice_past_level_eleven: ""
+    attack_dice_past_level_eleven: 2d8
     levels:
-        - 1;2;2;Feat_of_Power;1dx
-        - 2;2;2;Custom_Ability;1dx
+        - 1;2;2;Programmed_Stand&Stand_Marking;1dx
+        - 2;2;2;Custom_Ability&Immense_Range|Immense_Power;1dx
         - 3;2;2;Ability_Score_Improvement;2dx
-        - 4;2;2;Armored_Stand|Melee_Barrage|Detached_Senses;2dx
-        - 5;3;2;Stand_Rush;3dx
-        - 6;3;3;choose=4&Ability_Score_Improvement;3dx
-        - 7;3;3;Counterattacking_Blow|Offensive_Blow;4dx
+        - 4;2;2;Detached_Stand|Detached_Senses;2dx
+        - 5;3;2;feat=Simple_Weapon_Proficiency|Martial_Weapon_Proficiency|feat=Pistol_Proficiency|feat=Rifle_Proficiency|feat=Tavern_Brawler;3dx
+        - 6;3;3;Ability_Score_Improvement;3dx
+        - 7;3;3;Remote_Grappler|Self-Preservation;4dx
         - 8;3;3;Ability_Score_Improvement;4dx
-        - 9;4;3;Block_Physical_Projectile|Block_Stand_Projectile;5dx
+        - 9;4;3;Two_Modes|feat=Tanky|feat=Scarflesh;5dx
         - 10;4;3;Ability_Score_Improvement;5dx
-        - 11;4;4;attack_dice_inc=2d10;6dx
-        - 12;4;4;Stand_Leap;6dx
+        - 11;4;4;attack_dice_inc=2d8;6dx
+        - 12;4;4;Oblivious_Facade|feat=Close_Combat_Specialist;6dx
         - 13;5;4;Ability_Score_Improvement;7dx
-        - 14;5;4;choose=4|7|9&Menacing_Aura;7dx
+        - 14;5;4;choose=1|4|5|7|12;7dx
         - 15;5;4;The_Requiem_Quietly_Plays&Special_Ability_(2_SE);8dx
         - 16;5;5;-;8dx
         - 17;6;5;-;9dx
@@ -64,75 +65,72 @@ stand:
         - 19;6;5;-;10dx
         - 20;6;6;Heaven_Calls;10dx
     abilities:
-        - Anchored_Stand
-        - Block_Physical_Projectile
-        - Block_Stand_Projectile
-        - Counterattacking_Blow
         - Detached_Senses
-        - Feat_of_Power
-        - Melee_Barrage
-        - Stand_Leap
-        - Stand_Rush
-        - Offensive_Blow
-        - Menacing_Aura
+        - Detached_Stand
+        - Immense_Power
+        - Immense_Range
+        - Oblivious_Facade
+        - Programmed_Stand
+        - Remote_Grappler
+        - Self-Preservation
+        - Stand_Marking
+        - Two_Modes
 passion:
-    name: Survivalist
+    name: Artist
     description: ""
     examples: ""
     traits:
         proficiencies:
-            - Insight
-            - Perception
-            - AnimalHandling
-            - Survival
-        proficiencies_extra: Tool:HerbalismKit
+            - Slight Of Hand
+            - Performance
+        proficiencies_extra: Tool:ArtistTools|Instrument
         languages: 0
         extra: ""
         saving_throws:
-            - con
-            - wis
+            - dex
+            - itl
         ability_scores:
             str: 0
-            dex: 0
-            con: 2
-            itl: 0
-            wis: 2
+            dex: 2
+            con: 0
+            itl: 1
+            wis: 0
             cha: 0
 skill_pro:
     - level: 0
-      value: 3
+      value: -1
       stat_type: dex
       skill_name: Acrobatics
-    - level: 1
-      value: 7
+    - level: 0
+      value: 1
       stat_type: wis
       skill_name: AnimalHandling
     - level: 0
-      value: 2
+      value: 4
       stat_type: int
       skill_name: Arcana
     - level: 0
-      value: 4
+      value: 0
       stat_type: str
       skill_name: Athlete
     - level: 0
-      value: 0
+      value: 3
       stat_type: cha
       skill_name: Deception
     - level: 0
-      value: 2
+      value: 4
       stat_type: int
       skill_name: History
-    - level: 1
-      value: 7
+    - level: 0
+      value: 1
       stat_type: wis
       skill_name: Insight
     - level: 0
-      value: 0
+      value: 3
       stat_type: cha
       skill_name: Intimidation
     - level: 0
-      value: 2
+      value: 4
       stat_type: int
       skill_name: Investigation
     - level: 0
@@ -140,96 +138,102 @@ skill_pro:
       stat_type: wis
       skill_name: Medicine
     - level: 0
-      value: 2
+      value: 4
       stat_type: int
       skill_name: Nature
-    - level: 1
-      value: 7
+    - level: 0
+      value: 1
       stat_type: wis
       skill_name: Perception
     - level: 0
-      value: 0
+      value: 3
       stat_type: cha
       skill_name: Performer
     - level: 0
-      value: 0
+      value: 3
       stat_type: cha
       skill_name: Persuasion
     - level: 0
-      value: 2
+      value: 4
       stat_type: int
       skill_name: Religion
     - level: 0
-      value: 3
+      value: -1
       stat_type: dex
       skill_name: SlightOfHand
     - level: 0
-      value: 3
+      value: -1
       stat_type: dex
       skill_name: Stealth
-    - level: 1
-      value: 7
+    - level: 0
+      value: 1
       stat_type: wis
       skill_name: Survival
 saving_throws:
     cha:
         level: 0
-        value: 0
+        value: 3
         stat_type: cha
         skill_name: ""
     con:
-        level: 1
-        value: 4
+        level: 0
+        value: 2
         stat_type: con
         skill_name: ""
     dex:
-        level: 0
-        value: 3
+        level: 1
+        value: -1
         stat_type: dex
         skill_name: ""
     itl:
-        level: 0
-        value: 2
+        level: 1
+        value: 4
         stat_type: itl
         skill_name: ""
     str:
         level: 0
-        value: 4
+        value: 0
         stat_type: str
         skill_name: ""
     wis:
-        level: 1
+        level: 0
         value: 1
         stat_type: wis
         skill_name: ""
 char_ability_scores:
-    cha: 10
-    con: 18
-    dex: 16
-    itl: 15
-    str: 18
+    cha: 17
+    con: 14
+    dex: 8
+    itl: 18
+    str: 11
     wis: 12
 char_ability_modifiers:
-    cha: 0
-    con: 4
-    dex: 3
-    itl: 2
-    str: 4
+    cha: 3
+    con: 2
+    dex: -1
+    itl: 4
+    str: 0
     wis: 1
 stand_ability_scores:
-    dur: 114
-    ngy: 16
-    pow: 131
-    pre: 110
-    ran: 81
-    spe: 62
+    dur: 74
+    ngy: 32
+    pow: 39
+    pre: 16
+    ran: 94
+    spe: 42
 stand_ability_modifiers:
-    dur: 11
-    ngy: 1
-    pow: 13
-    pre: 11
-    ran: 8
-    spe: 6
+    dur: 7
+    ngy: 3
+    pow: 3
+    pre: 1
+    ran: 9
+    spe: 4
+hit_points_rolls:
+    - 10
+    - 6
+    - 7
+    - 2
+    - 6
 feats:
     - name: Adrenaline Rush
       prereq: str>13|passion=Hard Laborer
@@ -528,24 +532,5 @@ abilities:
       text: You and your Stand have different health pools. When your HP reaches 0, your Stand may continue to function, but NOT VICE VERSA. However, if either of them are killed, the other is killed as
       allowed:
         - Revenge
-hit_points_rolls:
-    - 12
-    - 9
-    - 6
-    - 9
-    - 11
-    - 4
-    - 11
-    - 9
-    - 11
-    - 1
-    - 2
-    - 8
-    - 1
-    - 4
-    - 10
-    - 4
-    - 5
-    - 7
-    - 5
-    - 7
+stands: []
+Passions: []

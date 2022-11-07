@@ -110,41 +110,43 @@ func GetNameArrayFeats(data []Feat) []string {
 	return ret
 }
 
-func StartCharacterBuildingGUI(cs *Character_Sheet, app *tview.Application) *tview.Pages {
-	pages := tview.NewPages()
-
-	pickStand := PickStand(cs)
-	pickPassion := PickPassion(cs)
-
-	pageList := []tview.Grid{
-		*pickStand,
-		*pickPassion,
-	}
-
-	for pageIndex := 0; pageIndex < len(pageList); pageIndex++ {
-		i := strconv.Itoa(pageIndex)
-		pages.AddPage(i, &pageList[pageIndex], false, pageIndex == 0)
-
-		buttonNext := tview.NewButton("Next -->").SetSelectedFunc(func() {
-			i = strconv.Itoa((pageIndex + 1) % len(pageList))
-			pages.SwitchToPage(i)
-		})
-
-		pageList[pageIndex].AddItem(buttonNext, 2, 0, 1, 1, 10, 10, true)
-	}
-
-	return pages
+type Character_Builder struct {
+	pages     *tview.Pages
+	buttons   *tview.Form
+	grid      *tview.Grid
+	pageList  []tview.Grid
+	pageIndex int
 }
 
-func PickPassion(cs *Character_Sheet) *tview.Grid {
-	stands_list := GetNameArrayStands(GetAllStands().Stands)
+func AddPage(cb *Character_Builder, id int, primitive *tview.Primitive) {
+	cb.pages.AddPage(strconv.Itoa(id), *primitive, true, true)
+}
+
+func Init(cb *Character_Builder) {
+	cb.pageIndex = 0
+	cb.buttons.AddButton("<-- Previous", func() {
+		cb.pageIndex = (cb.pageIndex - 1) % len(cb.pageList)
+		cb.pages.SwitchToPage(strconv.Itoa(cb.pageIndex))
+	})
+	cb.buttons.AddButton("Next -->", func() {
+		cb.pageIndex = (cb.pageIndex + 1) % len(cb.pageList)
+		cb.pages.SwitchToPage(strconv.Itoa(cb.pageIndex))
+	})
+
+	cb.grid = tview.NewGrid()
+	cb.grid.AddItem(cb.pages, 0, 0, 1, 1, 10, 10, true)
+	cb.grid.AddItem(cb.buttons, 1, 0, 1, 1, 10, 10, true)
+}
+
+func PickPassion(cs *Character_Sheet) tview.Primitive {
+	passionList := GetNameArrayPassions(GetAllPassions().Passions)
 
 	textView := tview.NewTextView()
 	textView.SetBorderPadding(1, 1, 1, 1)
 	textView.SetWordWrap(true)
 
 	form := tview.NewForm()
-	form.AddDropDown("Passion:", stands_list, 0, func(firstName string, value int) {
+	form.AddDropDown("Passion:", passionList, 0, func(firstName string, value int) {
 		textView.SetText(cs.Stands[value].Description)
 	})
 
@@ -158,7 +160,7 @@ func PickPassion(cs *Character_Sheet) *tview.Grid {
 	return grid
 }
 
-func PickStand(cs *Character_Sheet) *tview.Grid {
+func PickStand(cs *Character_Sheet) tview.Primitive {
 	stands_list := GetNameArrayStands(GetAllStands().Stands)
 
 	textView := tview.NewTextView()
@@ -192,11 +194,13 @@ func StartBuildingCharacter() {
 
 	cs.Stands = LoadStands().Stands
 
-	flex := PickStand(&cs)
+	//flex := PickStand(&cs)
 
-	//flex := StartCharacterBuildingGUI(&cs, app)
-	app.SetRoot(flex, true)
-	app.SetFocus(flex)
+	var cb Character_Builder
+	Init(&cb)
+
+	app.SetRoot(cb.grid, true)
+	app.SetFocus(cb.grid)
 	app.EnableMouse(true)
 
 	uiRun(app)

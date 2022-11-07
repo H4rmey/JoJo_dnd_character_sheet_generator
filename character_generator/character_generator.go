@@ -170,7 +170,7 @@ func generate_passion_proficiencies(passion Passion, ability_modifiers_char map[
 }
 
 func select_passion() Passion {
-	file, err := ioutil.ReadFile("../yaml/passions.yaml")
+	file, err := ioutil.ReadFile("./yaml/passions.yaml")
 
 	if err != nil {
 		log.Fatal(err)
@@ -355,10 +355,6 @@ func add_new_ability(cs *Character_Sheet, ability_name string) bool {
 		feat := strings.Split(ability_name, "=")[1]
 		fmt.Printf("Instead of ability, adding feat: %s\n", feat)
 		return AddFeat(cs, feat)
-	}
-
-	if strings.Contains(ability_name, "") {
-		return true
 	}
 
 	fmt.Printf("Adding Ability: %s\n", ability_name)
@@ -615,7 +611,7 @@ func generate_character_statistics(character_sheet *Character_Sheet, recalc_star
 	}
 }
 
-func GenerateRandomCharacter() {
+func GenerateRandomCharacter(level int) {
 	//	// Create character sheet
 	var character_sheet Character_Sheet
 	character_sheet.Name = "template name"
@@ -647,7 +643,7 @@ func GenerateRandomCharacter() {
 
 	generate_character_statistics(&character_sheet, true)
 	PrintCharacterSheet(character_sheet)
-	for i := 0; i < 20; i++ {
+	for i := 0; i < level; i++ {
 		level_up_random(&character_sheet)
 	}
 
