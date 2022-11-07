@@ -11,65 +11,120 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-func ExportCharacterToYaml(cs Character_Sheet) {
-	file, err := os.OpenFile(strings.ReplaceAll(cs.Name, " ", "_")+".yaml", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0600)
-	if err != nil {
-		log.Fatalf("error opening/creating file: %v", err)
-	}
-	defer file.Close()
+func GetAllPassions() Yaml2Passion {
+	file, err := ioutil.ReadFile("./yaml/passions.yaml")
 
-	enc := yaml.NewEncoder(file)
-
-	err = enc.Encode(cs)
 	if err != nil {
-		log.Fatalf("error encoding: %v", err)
+		log.Fatal(err)
 	}
+
+	var data Yaml2Passion
+	error := yaml.Unmarshal([]byte(file), &data)
+	if error != nil {
+		log.Fatal(err)
+	}
+
+	return data
 }
-func PrintCharacterSheet(character_sheet Character_Sheet) {
-	fmt.Printf("============= Character Sheet Level: %d ================\n", character_sheet.Level)
-	for i := 0; i < len(character_sheet.Skill_pro); i++ {
-		sp := character_sheet.Skill_pro[i]
-		fmt.Printf("p:%d - %s (%s): %d \n", sp.Level, sp.Skill_name, sp.Stat_type, sp.Value)
+
+func GetAllStands() Yaml2Stand {
+	file, err := ioutil.ReadFile("./yaml/stand_types.yaml")
+
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	fmt.Printf("proficiency bonus: %d\n", character_sheet.Proficiency_bonus)
-	fmt.Printf("Passions: %s\n", character_sheet.Passion.Name)
-	fmt.Printf("Stand Type: %s\n", character_sheet.Stand.Name)
-	fmt.Printf("Ability Dice: %s\n", character_sheet.Ability_dice)
+	var data Yaml2Stand
+	error := yaml.Unmarshal([]byte(file), &data)
+	if error != nil {
+		log.Fatal(err)
+	}
 
-	fmt.Printf("Ability Score:\n")
-	fmt.Printf("cha: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["cha"], character_sheet.Char_ability_modifiers["cha"])
-	fmt.Printf("con: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["con"], character_sheet.Char_ability_modifiers["con"])
-	fmt.Printf("dex: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["dex"], character_sheet.Char_ability_modifiers["dex"])
-	fmt.Printf("itl: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["itl"], character_sheet.Char_ability_modifiers["itl"])
-	fmt.Printf("str: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["str"], character_sheet.Char_ability_modifiers["str"])
-	fmt.Printf("wis: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["wis"], character_sheet.Char_ability_modifiers["wis"])
+	return data
+}
 
-	fmt.Printf("Saving Throws:\n")
-	fmt.Printf("cha: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["cha"].Value, character_sheet.Saving_throws["cha"].Level)
-	fmt.Printf("con: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["con"].Value, character_sheet.Saving_throws["con"].Level)
-	fmt.Printf("dex: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["dex"].Value, character_sheet.Saving_throws["dex"].Level)
-	fmt.Printf("itl: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["itl"].Value, character_sheet.Saving_throws["itl"].Level)
-	fmt.Printf("str: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["str"].Value, character_sheet.Saving_throws["str"].Level)
-	fmt.Printf("wis: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["wis"].Value, character_sheet.Saving_throws["wis"].Level)
+func GetAllAbilities() Yaml2Abilities {
+	file, err := ioutil.ReadFile("./yaml/abilities.yaml")
 
-	fmt.Printf("Stand Ability Scores:\n")
-	fmt.Printf("pow: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["pow"], character_sheet.Stand_ability_modifiers["pow"])
-	fmt.Printf("pre: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["pre"], character_sheet.Stand_ability_modifiers["pre"])
-	fmt.Printf("dur: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["dur"], character_sheet.Stand_ability_modifiers["dur"])
-	fmt.Printf("ran: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["ran"], character_sheet.Stand_ability_modifiers["ran"])
-	fmt.Printf("spe: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["spe"], character_sheet.Stand_ability_modifiers["spe"])
-	fmt.Printf("ngy: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["ngy"], character_sheet.Stand_ability_modifiers["ngy"])
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	fmt.Printf("char_AC: %d\n", character_sheet.Armor_class)
-	fmt.Printf("stand_AC: %d\n", character_sheet.Stand_ac)
-	fmt.Printf("stand_movement: %d\n", character_sheet.Stand_movement)
-	fmt.Printf("stand_attack_per_turn: %d\n", character_sheet.Stand_attack_per_turn)
-	fmt.Printf("stand_damage_reduction: %d\n", character_sheet.Stand_damage_reduction)
-	fmt.Printf("initiative: %d\n", character_sheet.Initiative)
-	fmt.Printf("hit_dice: %s\n", character_sheet.Stand.HitDice)
-	fmt.Printf("stand_dc: %d\n", character_sheet.Stand_dc)
-	fmt.Printf("hit_points: %d\n", character_sheet.Hit_points)
+	var data Yaml2Abilities
+	error := yaml.Unmarshal([]byte(file), &data)
+	if error != nil {
+		log.Fatal(err)
+	}
+
+	return data
+}
+
+func GetAllFeats() Yaml2Feats {
+	file, err := ioutil.ReadFile("./yaml/feats.yaml")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var data Yaml2Feats
+	error := yaml.Unmarshal([]byte(file), &data)
+	if error != nil {
+		log.Fatal(err)
+	}
+
+	return data
+}
+
+func GetNameArrayPassions(data []Passion) []string {
+	ret := []string{}
+	for i := 0; i < len(data); i++ {
+		ret = append(ret, data[i].Name)
+	}
+
+	return ret
+}
+
+func GetNameArrayStands(data []Stand) []string {
+	ret := []string{}
+	for i := 0; i < len(data); i++ {
+		ret = append(ret, data[i].Name)
+	}
+
+	return ret
+}
+
+func GetNameArrayAbilities(data []Abilities) []string {
+	ret := []string{}
+	for i := 0; i < len(data); i++ {
+		ret = append(ret, data[i].Name)
+	}
+
+	return ret
+}
+
+func GetNameArrayFeats(data []Feat) []string {
+	ret := []string{}
+	for i := 0; i < len(data); i++ {
+		ret = append(ret, data[i].Name)
+	}
+
+	return ret
+}
+
+func calculate_char_AC(am map[string]int) int {
+	var a = [3]int{-1, -1, -1}
+	a[0] = 10 + am["dex"] + am["wis"]
+	a[1] = 10 + am["dex"] + am["con"]
+	a[2] = 10 + am["wis"] + am["con"]
+
+	highest := -99999
+	for _, i := range a {
+		if i > highest {
+			highest = i
+		}
+	}
+
+	return highest
 }
 
 func calculate_stand_AC(am map[string]int) int {
@@ -89,7 +144,7 @@ func calculate_stand_AC(am map[string]int) int {
 }
 
 func LoadAbilities() []Abilities {
-	file, err := ioutil.ReadFile("../yaml/abilities.yaml")
+	file, err := ioutil.ReadFile("./yaml/abilities.yaml")
 
 	if err != nil {
 		log.Fatal(err)
@@ -105,7 +160,7 @@ func LoadAbilities() []Abilities {
 }
 
 func LoadFeats() []Feat {
-	file, err := ioutil.ReadFile("../yaml/feats.yaml")
+	file, err := ioutil.ReadFile("./yaml/feats.yaml")
 
 	if err != nil {
 		log.Fatal(err)
@@ -201,4 +256,131 @@ func generate_passion_ability_score(passion Passion, ability_scores map[string]i
 	cas["wis"] = ability_scores["wis"] + passion.Traits.AbilityScores.Wis
 
 	return cas
+}
+
+func PrintCharacterSheet(character_sheet Character_Sheet) {
+	fmt.Printf("============= Character Sheet Level: %d ================\n", character_sheet.Level)
+	for i := 0; i < len(character_sheet.Skill_pro); i++ {
+		sp := character_sheet.Skill_pro[i]
+		fmt.Printf("p:%d - %s (%s): %d \n", sp.Level, sp.Skill_name, sp.Stat_type, sp.Value)
+	}
+
+	fmt.Printf("proficiency bonus: %d\n", character_sheet.Proficiency_bonus)
+	fmt.Printf("Passions: %s\n", character_sheet.Passion.Name)
+	fmt.Printf("Stand Type: %s\n", character_sheet.Stand.Name)
+	fmt.Printf("Ability Dice: %s\n", character_sheet.Ability_dice)
+
+	fmt.Printf("Ability Score:\n")
+	fmt.Printf("cha: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["cha"], character_sheet.Char_ability_modifiers["cha"])
+	fmt.Printf("con: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["con"], character_sheet.Char_ability_modifiers["con"])
+	fmt.Printf("dex: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["dex"], character_sheet.Char_ability_modifiers["dex"])
+	fmt.Printf("itl: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["itl"], character_sheet.Char_ability_modifiers["itl"])
+	fmt.Printf("str: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["str"], character_sheet.Char_ability_modifiers["str"])
+	fmt.Printf("wis: %d   \t modifiers: %d \n", character_sheet.Char_ability_scores["wis"], character_sheet.Char_ability_modifiers["wis"])
+
+	fmt.Printf("Saving Throws:\n")
+	fmt.Printf("cha: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["cha"].Value, character_sheet.Saving_throws["cha"].Level)
+	fmt.Printf("con: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["con"].Value, character_sheet.Saving_throws["con"].Level)
+	fmt.Printf("dex: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["dex"].Value, character_sheet.Saving_throws["dex"].Level)
+	fmt.Printf("itl: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["itl"].Value, character_sheet.Saving_throws["itl"].Level)
+	fmt.Printf("str: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["str"].Value, character_sheet.Saving_throws["str"].Level)
+	fmt.Printf("wis: %d   \t is_poficient: %d \n", character_sheet.Saving_throws["wis"].Value, character_sheet.Saving_throws["wis"].Level)
+
+	fmt.Printf("Stand Ability Scores:\n")
+	fmt.Printf("pow: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["pow"], character_sheet.Stand_ability_modifiers["pow"])
+	fmt.Printf("pre: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["pre"], character_sheet.Stand_ability_modifiers["pre"])
+	fmt.Printf("dur: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["dur"], character_sheet.Stand_ability_modifiers["dur"])
+	fmt.Printf("ran: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["ran"], character_sheet.Stand_ability_modifiers["ran"])
+	fmt.Printf("spe: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["spe"], character_sheet.Stand_ability_modifiers["spe"])
+	fmt.Printf("ngy: %d   \t modifier: %d\n", character_sheet.Stand_ability_scores["ngy"], character_sheet.Stand_ability_modifiers["ngy"])
+
+	fmt.Printf("char_AC: %d\n", character_sheet.Armor_class)
+	fmt.Printf("stand_AC: %d\n", character_sheet.Stand_ac)
+	fmt.Printf("stand_movement: %d\n", character_sheet.Stand_movement)
+	fmt.Printf("stand_attack_per_turn: %d\n", character_sheet.Stand_attack_per_turn)
+	fmt.Printf("stand_damage_reduction: %d\n", character_sheet.Stand_damage_reduction)
+	fmt.Printf("initiative: %d\n", character_sheet.Initiative)
+	fmt.Printf("hit_dice: %s\n", character_sheet.Stand.HitDice)
+	fmt.Printf("stand_dc: %d\n", character_sheet.Stand_dc)
+	fmt.Printf("hit_points: %d\n", character_sheet.Hit_points)
+}
+
+func ConvertCharacterSheetForExport(cs Character_Sheet) Export_Character_Sheet {
+	ecd := Export_Character_Details{
+		Description:       "",
+		Backstory:         "",
+		Relations:         "",
+		Inventory:         "",
+		Languages:         "",
+		Weapons:           "",
+		Image:             "",
+		Flaws:             "",
+		Ideals:            "",
+		Personality:       "",
+		Age:               "",
+		Height:            "",
+		Weight:            "",
+		SkinTone:          "",
+		EyeColor:          "",
+		HairColor:         "",
+		AttackDescription: "",
+		ExtraInfo:         "",
+	}
+
+	stand := Export_Stand{
+		Name:                      cs.Stand.Name,
+		AbilityDice:               cs.Ability_dice,
+		DamageReduction:           cs.Stand_damage_reduction,
+		Movement:                  cs.Stand_movement,
+		AttackPerTurn:             cs.Stand_attack_per_turn,
+		DC:                        cs.Stand_dc,
+		AC:                        cs.Stand_ac,
+		AttackDice:                cs.Stand.AttackDice,
+		AttackDiceHigherLevel:     cs.Stand.AttackDiceHigherLevel,
+		AttackDicePastLevelEleven: cs.Stand.AttackDicePastLevelEleven,
+		HitDice:                   cs.Stand.HitDice,
+		OnLevelUp:                 cs.Stand.OnLevelUp,
+		Description:               cs.Stand.Description,
+		Note:                      cs.Stand.Note,
+		AbilityScores:             cs.Stand_ability_scores,
+		AbilityModifiers:          cs.Stand_ability_modifiers,
+	}
+
+	cse := Export_Character_Sheet{
+		Name:              cs.Name,
+		Passion:           cs.Passion.Name,
+		Standtype:         cs.Stand.Name,
+		HitPoints:         cs.Hit_points,
+		Level:             cs.Level,
+		HitDice:           cs.Stand.HitDice,
+		Movement:          cs.Movement,
+		Proficiency_bonus: cs.Proficiency_bonus,
+		ArmorClass:        cs.Armor_class,
+		Initiative:        cs.Initiative,
+		Perception:        cs.Passive_perception,
+		Feats_list:        cs.Feats_list,
+		Abilities_list:    cs.Abilities_list,
+		Stand:             stand,
+		SavingThrows:      cs.Saving_throws,
+		AbilityScores:     cs.Char_ability_scores,
+		AbilityModifiers:  cs.Char_ability_modifiers,
+		Skill_pro:         cs.Skill_pro,
+		CharDetails:       ecd,
+	}
+	return cse
+}
+
+func ExportCharacterToYaml(cse Export_Character_Sheet) {
+	file, err := os.OpenFile(strings.ReplaceAll(cse.Name, " ", "_")+".yaml", os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0600)
+	if err != nil {
+		log.Fatalf("error opening/creating file: %v", err)
+	}
+	defer file.Close()
+
+	enc := yaml.NewEncoder(file)
+
+	err = enc.Encode(cse)
+	if err != nil {
+		log.Fatalf("error encoding: %v", err)
+	}
 }

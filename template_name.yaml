@@ -1,178 +1,55 @@
 name: template name
-ability_dice: 3d6
-hit_dice: ""
-proficiency_bonus: 3
-stand_damage_reduction: 6
-stand_movment: 8
-stand_attack_per_turn: 1
-stand_dc: 14
-stand_ac: 20
-hit_points: 41
-armor_class: 13
-initiative: 0
-passive_perception: 0
-movement: 0
+passion: Student
+stand_type: Ability
+hit_points: 22
 level: 5
+hit_dice: 1d6
+movement: 25
+proficiency_bonus: 3
+armor_class: 14
+initiative: 2
+passive_perception: 11
 feats_list:
-    - Immense Impact
-    - Interpreter
+    - Tavern Brawler
+    - Heart of Truth
     - ""
 abilities_list:
-    - Programmed_Stand
-    - Stand_Marking
-    - Immense_Power
+    - Slippery
+    - Self-Acclimation
     - Detached_Senses
 stand:
-    attack_dice: 1d8
+    name: Ability
+    ability_dice: 3d12
+    damage_reduction: 1
+    movement: 10
+    attack_per_turn: 2
+    stand_dc: 12
+    stand_ac: 18
+    attack_dice: 1d4
     attack_dice_higher_level: ""
-    hit_dice: 1d10
+    attack_dice_past_level_eleven: 1d6
+    hit_dice: 1d6
     on_level_up: 2d4
-    name: Remote
-    modification_chart:
-        str: 3
-        dex: 2
-        con: 4
-        itl: 5
-        wis: 3
-        cha: 2
-    description: Remote-Type Stands are immensely powerful. Their Abilities and strength can often not be ignored. However, the users of these Stands often cannot control them, with their Stands instead automatically following a simple task. For example, attack the closest human until its breathing stops for 5 seconds, prevent anybody from entering a building, use your ability on anyone who opens a door, attack anyone who steps into a shadow, etc. These Stands, while often powerful indeed, have very easily exploitable weaknesses due to the simple nature of how they function.
+    description: 'Many Stands are able to physically manifest themselves clearly and powerfully, but most Ability-Type Stands do not function in the same way. Some Ability Stands are not visible or tangible unless specifically made so by their user. While these Stands have very little in the way of physical power, their masterful use of their Abilities are able to make them more than handy in the fight. '
     note: ""
-    special:
-        - 10
-        - 100
-        - 250
-        - 500
-    attack_dice_past_level_eleven: 2d8
-    levels:
-        - 1;2;2;Programmed_Stand&Stand_Marking;1dx
-        - 2;2;2;Custom_Ability&Immense_Range|Immense_Power;1dx
-        - 3;2;2;Ability_Score_Improvement;2dx
-        - 4;2;2;Detached_Stand|Detached_Senses;2dx
-        - 5;3;2;feat=Simple_Weapon_Proficiency|Martial_Weapon_Proficiency|feat=Pistol_Proficiency|feat=Rifle_Proficiency|feat=Tavern_Brawler;3dx
-        - 6;3;3;Ability_Score_Improvement;3dx
-        - 7;3;3;Remote_Grappler|Self-Preservation;4dx
-        - 8;3;3;Ability_Score_Improvement;4dx
-        - 9;4;3;Two_Modes|feat=Tanky|feat=Scarflesh;5dx
-        - 10;4;3;Ability_Score_Improvement;5dx
-        - 11;4;4;attack_dice_inc=2d8;6dx
-        - 12;4;4;Oblivious_Facade|feat=Close_Combat_Specialist;6dx
-        - 13;5;4;Ability_Score_Improvement;7dx
-        - 14;5;4;choose=1|4|5|7|12;7dx
-        - 15;5;4;The_Requiem_Quietly_Plays&Special_Ability_(2_SE);8dx
-        - 16;5;5;-;8dx
-        - 17;6;5;-;9dx
-        - 18;6;5;-;9dx
-        - 19;6;5;-;10dx
-        - 20;6;6;Heaven_Calls;10dx
-    abilities:
-        - Detached_Senses
-        - Detached_Stand
-        - Immense_Power
-        - Immense_Range
-        - Oblivious_Facade
-        - Programmed_Stand
-        - Remote_Grappler
-        - Self-Preservation
-        - Stand_Marking
-        - Two_Modes
-passion:
-    name: Artist
-    description: ""
-    examples: ""
-    traits:
-        proficiencies:
-            - Slight Of Hand
-            - Performance
-        proficiencies_extra: Tool:ArtistTools|Instrument
-        languages: 0
-        extra: ""
-        saving_throws:
-            - dex
-            - itl
-        ability_scores:
-            str: 0
-            dex: 2
-            con: 0
-            itl: 1
-            wis: 0
-            cha: 0
-skill_pro:
-    - level: 0
-      value: -1
-      stat_type: dex
-      skill_name: Acrobatics
-    - level: 0
-      value: 1
-      stat_type: wis
-      skill_name: AnimalHandling
-    - level: 0
-      value: 4
-      stat_type: int
-      skill_name: Arcana
-    - level: 0
-      value: 0
-      stat_type: str
-      skill_name: Athlete
-    - level: 0
-      value: 3
-      stat_type: cha
-      skill_name: Deception
-    - level: 0
-      value: 4
-      stat_type: int
-      skill_name: History
-    - level: 0
-      value: 1
-      stat_type: wis
-      skill_name: Insight
-    - level: 0
-      value: 3
-      stat_type: cha
-      skill_name: Intimidation
-    - level: 0
-      value: 4
-      stat_type: int
-      skill_name: Investigation
-    - level: 0
-      value: 1
-      stat_type: wis
-      skill_name: Medicine
-    - level: 0
-      value: 4
-      stat_type: int
-      skill_name: Nature
-    - level: 0
-      value: 1
-      stat_type: wis
-      skill_name: Perception
-    - level: 0
-      value: 3
-      stat_type: cha
-      skill_name: Performer
-    - level: 0
-      value: 3
-      stat_type: cha
-      skill_name: Persuasion
-    - level: 0
-      value: 4
-      stat_type: int
-      skill_name: Religion
-    - level: 0
-      value: -1
-      stat_type: dex
-      skill_name: SlightOfHand
-    - level: 0
-      value: -1
-      stat_type: dex
-      skill_name: Stealth
-    - level: 0
-      value: 1
-      stat_type: wis
-      skill_name: Survival
+    ability_scores:
+        dur: 15
+        ngy: 60
+        pow: 17
+        pre: 33
+        ran: 44
+        spe: 63
+    ability_modifiers:
+        dur: 1
+        ngy: 6
+        pow: 1
+        pre: 3
+        ran: 4
+        spe: 6
 saving_throws:
     cha:
-        level: 0
-        value: 3
+        level: 1
+        value: 1
         stat_type: cha
         skill_name: ""
     con:
@@ -181,356 +58,128 @@ saving_throws:
         stat_type: con
         skill_name: ""
     dex:
-        level: 1
-        value: -1
+        level: 0
+        value: 0
         stat_type: dex
         skill_name: ""
     itl:
         level: 1
-        value: 4
+        value: -1
         stat_type: itl
         skill_name: ""
     str:
         level: 0
-        value: 0
+        value: 3
         stat_type: str
         skill_name: ""
     wis:
         level: 0
-        value: 1
+        value: 2
         stat_type: wis
         skill_name: ""
 char_ability_scores:
-    cha: 17
+    cha: 12
     con: 14
-    dex: 8
-    itl: 18
-    str: 11
-    wis: 12
+    dex: 11
+    itl: 8
+    str: 17
+    wis: 15
 char_ability_modifiers:
-    cha: 3
+    cha: 1
     con: 2
-    dex: -1
-    itl: 4
-    str: 0
-    wis: 1
-stand_ability_scores:
-    dur: 74
-    ngy: 32
-    pow: 39
-    pre: 16
-    ran: 94
-    spe: 42
-stand_ability_modifiers:
-    dur: 7
-    ngy: 3
-    pow: 3
-    pre: 1
-    ran: 9
-    spe: 4
-hit_points_rolls:
-    - 10
-    - 6
-    - 7
-    - 2
-    - 6
-feats:
-    - name: Adrenaline Rush
-      prereq: str>13|passion=Hard Laborer
-      description: The body has a remarkable tendency to keep itself alive in tough situations, and your body is even better at doing so.
-      effects:
-        - As a Bonus Action you may activate this ability, giving you Advantage on all Strength, Constitution, and Dexterity Saving Throws, and an amount of Temporary Hit Points equal to your Level. These benefits last for up to 10 Rounds (1 Minute).
-        - You can use this Feat an amount of times equal to your Strength Modifier per Long Rest.
-    - name: Automatic Weapon Proficiency
-      prereq: ""
-      description: You've put in hours on the shooting range, and now you can use Automatic Weapons properly.
-      effects:
-        - You may add your Proficiency Bonus to your Attack rolls when using Automatic Weapons.
-        - Instead of the weapon jamming on a roll of 5 or lower, the weapon only jams on a Critical Failure.
-        - When the weapon jams, you may fix it as a Bonus Action.
-    - name: Brutality
-      prereq: ""
-      description: You've seen a lot of combat and have learned not to hold back.
-      effects:
-        - If you miss your target on a Melee Attack roll you may make the same Melee Attack as a Bonus Action. If this attack lands upon the intended target it is a guaranteed Critical Hit.
-        - The damage dealt by this Brutality Attack cannot be Non-Lethal Damage.
-        - You may use this ability once per Short or Long Rest, but it is not consumed if it misses.
-    - name: Catlike Agility
-      prereq: dex>13|passion=Artist
-      description: Your Reflexes are faster than that of the average person.
-      effects:
-        - As a Bonus Action, you may make the Dodge action.
-        - You may use this Feat an amount of times equal to your Dexterity Modifier per Long Rest.
-    - name: Clever Disguise
-      prereq: ""
-      description: You're used to getting away from people and fighting from a distance. However, if those coming after you have seen your face or recognize you in any way, you may need a new set of clothes and a haircut to pass yourself off as someone else.
-      effects:
-        - You may spend 1 Minute to create a disguise for yourself.
-        - While disguised, you gain Advantage on all Deception Checks to pass yourself off as someone else and any attempts to determine your true identity are made with Disadvantage.
-    - name: Combat Medic
-      prereq: itl>13|passion=Physician
-      description: Your medical knowledge is priceless on the battlefield.
-      effects:
-        - You may make Medicine Checks as a Bonus Actions.
-        - If you have a first aid kit or something similar you may make a DC 15 Medicine Check as an Action upon a creature that you can touch. On success, the creature may spend a Hit Die to heal.
-    - name: Consistent Accuracy
-      prereq: ""
-      description: You're very skilled at judging distance and accurately striking your target.
-      effects:
-        - When making attacks using Thrown or Ranged Weapons (including Ranged Attack), you may aim up to the Weapon's Long Range without Disadvantage.
-    - name: Deadly Accuracy
-      prereq: dex>13
-      description: Your aim is steady and true, and you know exactly where to fire to maximize damage.
-      effects:
-        - When making an Attack with a weapon you may choose to use a full Action and Bonus Action to attack. If you choose to do this, you can add your To-Hit Bonus twice.
-        - Upon a successful Hit, you may roll double the Damage Dice that you would roll normally and gain Advantage on them.
-        - This Feat may be activated even when you use the ability that gives you Advantage on a Sniper Rifle.
-        - When used with Ranged Attack this Feat instead on gives Advantage on the Damage Dice rolled.
-    - name: Energy Imbuement
-      prereq: stand_level>1
-      description: Some Stand Users are able to extend just a little bit of energy into a physical object, making it a permanent part of their Stand.
-      effects:
-        - You may make an object a permanent part of your Stand by imbuing it with Stand Energy for 8 hours.
-        - The object now deals Stand damage and gains the same resistance that the rest of your Stand has.
-        - If the object is destroyed, it does not damage the User in any way and it regenerates mass at a rate of 1kg/hour.
-        - If the object is a Ranged Weapon then you may refill its ammo to maximum capacity as a single Attack at the cost of 1 Stand Energy.
-        - This Feat may not be replaced once the object is permanently imbued.
-        - You may take this Feat multiple times if desired.
-    - name: Evasive
-      prereq: dex>13
-      description: You're quick on your feet and know how to navigate a battlefield.
-      effects:
-        - When you succeed a Dexterity Saving Throw you take no damage.
-        - When you fail a Dexterity Saving Throw you only take half damage.
-    - name: Headhunter
-      prereq: ""
-      description: You've fought the Undead many times before, and you know their tricks and how to best defeat them.
-      effects:
-        - You get +5 to all Attack rolls aimed at Undead Creatures' heads.
-        - You gain Advantage on any Saving Throws against effects inflicted by an Undead Creature.
-    - name: Heart of Truth
-      prereq: feat=!Heart of Lies
-      description: You've gone through a lot in life. You've witnessed struggle, pain, and possibly even death itself. You've seen the absolute worst of Humanity. and that is why it is of absolute importance that you achieve your goals.
-      effects:
-        - When you use a point of Inspiration, roll a d4. If you roll a 4, you gain back a point of Inspiration.
-    - name: Hidden Assassin
-      prereq: ""
-      description: You've spent a lot of time in the shadows and know how to keep yourself concealed.
-      effects:
-        - When making an attack with a Ranged weapon you do not reveal your position after your first shot, but on your second.
-        - If you do not perform any other Action outside of this first shot, you may roll for damage twice and use the higher value.
-    - name: Immense Impact
-      prereq: ""
-      description: You're used to utilizing momentum to attack your foes with a powerful attack, hitting them immediately and head-on.
-      effects:
-        - In order to activate this attack, you must first move at least 5 meters, then make a Melee Attack as the immediate action following it. This may activate whether you are running, falling, being thrown, etc, as long as you move more than 5 meters in the same turn immediately before your attack.
-        - This first attack after moving deals extra damage if it hits. If the melee attack hits, it deals damage equal to the amount of meters you have moved before attacking this turn. For example, if you moved 10 meters before this attack, it would deal 10 extra damage to your target.
-        - You may also perform a Reckless Dash, allowing you to make one free melee attack after moving in a straight line. You may use this ability an amount of times equal to your Strength Modifier per Long Rest.
-    - name: Interpreter
-      prereq: itl>13|passion=Service Worker
-      description: Through time spent learning languages you have gotten much better at learning new ones as well as decoding unknown languages.
-      effects:
-        - You learn 3 additional languages and learn another at Levels 5 and 10.
-        - You gain Advantage on Skill Checks related to attempting to understand the meaning of an unknown language or script.
-    - name: Level-Headed
-      prereq: itl>13|passion=Academic
-      description: Your level head allows you to get out of most situations using your experience and clever mind.
-      effects:
-        - When making a Charisma or Wisdom Saving Throw you may instead choose to make an Intelligence Saving Throw.
-    - name: Martial Weapon Proficiency
-      prereq: str>13|dex>13|passion=Thief
-      description: Through knowledge and training you have gained the ability to properly use Martial Weapons of all sorts.
-      effects:
-        - You may add your Proficiency Bonus to your Attack rolls when using Martial Weapons.
-        - You may also add your Proficiency Bonus to Damage when using these weapons.
-    - name: Motivated
-      prereq: ""
-      description: You have an incredible tendency to bounce back, even when the odds are stacked against you.
-      effects:
-        - When you fail a Saving Throw, you may instead choose to succeed.
-        - You may use this Feat an amount of times equal to half your Proficiency Bonus (rounded down) per Long Rest.
-    - name: Natural Talent
-      prereq: ""
-      description: Through a combination of experience and natural-born talent you have gotten very good at certain tasks.
-      effects:
-        - Choose up to Two Skills that you are Proficient in and gain Expertise in them.
-        - You may take this Feat multiple times if desired.
-    - name: Paranoia
-      prereq: ""
-      description: You've been aware of them for a while now. You don't know who, but you know that they've been after you for so long, and you've been evading them for what seems like forever.
-      effects:
-        - You may add your Proficiency Bonus to your Initiative Bonus, and enemies that attempt to surprise you get Disadvantage instead of Advantage on their Surprise Attack.
-    - name: Practical Experience
-      prereq: ""
-      description: Experience happens to be a great teacher, and you've learned a lot.
-      effects:
-        - You may gain Proficiency in Three Skills of your Choice.
-        - You may take this Feat multiple times if desired.
-    - name: Quick on your Feet
-      prereq: ""
-      description: You're used to getting out of difficult situations using your wit.
-      effects:
-        - You may gain Proficiency in a Saving Throw of your choice.
-    - name: Rifle Proficiency
-      prereq: ""
-      description: Through training and patience, you have gained the ability to accurately use rifles.
-      effects:
-        - You may add your Proficiency Bonus to your Attack rolls when using Rifles.
-        - If you choose not to move during your turn, you may add your Proficiency Bonus again to Attack rolls made with a Rifle on that turn.
-    - name: Shield Master
-      prereq: ""
-      description: You're pretty accustomed to using a shield in combat, and have learned how to move swiftly while carrying one.
-      effects:
-        - You no longer take a penalty to your Movement Speed while carrying a shield.
-        - You may perform a shield bash attack, which uses the same Attack Bonus and Damage Dice as either an Unarmed Strike or an Improvised Weapon.
-    - name: Stand Specialization
-      prereq: feat=Anchored Stand
-      description: Due to the Nature of your Stand, there are some things that simply cannot harm you.
-      effects:
-        - You and your Stand may gain Immunity to two damage types of your choice, but you gain Vulnerability to a damage type of your choice as well.
-        - These Imunnities and Vulnerabilities should tie in to your Stand's Anchor or Ability. For example, a Stand made out of Fire could be immune to Fire and Radiant Damage, but be vulnerable to Cold damage.
-        - If you gain Immunity to Bludgeoning, Slashing, or Piercing, you only gain one Immunity instead of two.
-        - You also become immune to the Stand counterpart of the chosen type(s).
-        - You may gain Immunities at the cost of Vulnerabilities as many times as you wish.
-        - Vulnerabilities gained through this Feat cannot be cancelled out by Resistance or Immunity gained through any means.
-    - name: Superhuman
-      prereq: ""
-      description: People usually have limits on how strong or smart they can get, but this is not always the case. You've found a way to push yourself past human limits.
-      effects:
-        - Pick one of your six Ability Scores to increase the maximum score for that stat by two.
-        - The Ability Score does not increase when you take this feat, only the maximum for it does.
-        - You may take this Feat multiple times if desired.
-    - name: Tavern Brawler
-      prereq: ""
-      description: Through experience and tussles, you've gained the ability to make objects from your environment into effective weaponry.
-      effects:
-        - You may add your Proficiency Bonus to Attack rolls when using any (non-weapon) object to attack somebody.
-        - If you already have Proficiency in Improvised Weapons, simply add the Proficiency Bonus again.
-        - You may pick up objects less than 20 kg as a free action, and can pick up or hide behind an object around 1 meter in area to use it as a makeshift shield. Depending on the size, and the DM's discretion, it becomes a Shield, a Tower Shield, or a form of Cover.
-abilities:
-    - name: Anchored Stand
-      text: Your Stand is physically attached, and anchored to a physical object. Your Stand, as such, may be damaged by physical means, as well as with Stands. However, regardless of if your Stand takes Physical or Stand Damage, you still apply the same damage reduction to it. Also, both you and your Stand gain Vulnerability to one Damage Type of your choice (as well as the Stand counterpart to that damage). If you are an Enhancement Type Stand User, you must find an amount of Material (or a specific object) that fits your specific anchor. This Material must be within your Standʼs Range Modifier in order for you to use it, and Activate your Stand.
-      allowed:
-        - Enhancement
-        - Independent
-    - name: Armored Stand
-      text: The amount of damage that your Stand can reduce per round is doubled.
-      allowed:
-        - Power
-        - Ranged
-        - Enhancement
-        - Revenge
-        - Independent
-    - name: Complete Control
-      text: 'Your Stand is a fusion of Stand Energy and a Physical Object. Youʼve gained enough control over your Stand that you can completely influence how your Stand functions (Example: Wheel Of Fortuneʼs squeezing, Strengthʼs control of the Ship itself).'
-      allowed:
-        - Enhancement
-    - name: Custom Ability
-      text: This is something that must be discussed with the DM of your Campaign. Further Details can be found in the Stands section, further above in the document. Stand Abilities are something integral to the existence of Stands, and itʼs a huge part of what makes JoJoʼs Bizarre Adventure such a fun, varied, and unique experience. A general rule of thumb is that the more specific your Stand Ability is, the more powerful it is. However, the more general it is, the more versatile it can be. Examples of Abilities are Anubisʼs possession, Hermit Purpleʼs Spirit photos, or White Albumʼs ability to freeze. A Custom Ability might also be a passive ability that may be activated or deactivated at will. Passive Abilities consume 1 Stand Energy at the Start of the Stand Userʼs Turn, and also take their Bonus Action to perform. If you are unable to use your Bonus Action, or you do not have enough Stand Energy remaining, the ability simply stops functioning.
-      allowed:
-        - Stands
-    - name: Detached Senses
-      text: You are able to experience and process sensory information using your Stand. Your Stand may See, Hear, Taste, Touch, and Smell the same way that you do. Furthermore, you may sense through your body, as well as your Stand, at the same time. For Hive Type Stand Users, you may sense through an amount of Instances equal to your Intelligence Score.
-      allowed:
-        - any
-    - name: Detached Stand
-      text: Your Stand no longer shares a health pool with you. If your Stand is destroyed or knocked unconscious, it will not affect you in any way. It takes 1d4 hours for it to fully regenerate and be able to manifest again. However, if you are killed or knocked unconscious, your Stand will cease to exist.
-      allowed:
-        - Remote
-    - name: Energy Conservation
-      text: Youʼve gained Expertise with using your Standʼs Ability. As such, you may expend less Stand Energy to perform the same Abilities. You consume half as much Stand Energy when using abilities that consume it, except for Ultimate Ability, which consumes the same amount as normal.
-      allowed:
-        - Ability
-    - name: General Anchors
-      text: 'As an Enhancement Type Stand User, youʼve taken your ability to the next level. Rather than having to anchor onto something specific (Metal Bar, Car, Boat), you may now anchor onto something similar to your original anchor (Example: heel of Fortune could anchor onto anything with wheels, Strength would be anything that floats in water).'
-      allowed:
-        - Enhancement
-    - name: Hot Pursuit
-      text: Whenever you are chasing aer somebody, no matter their Speed, your Stand may keep pace with them, so long as you can see them, and so long as they stay within your Standʼs Range.
-      allowed:
-        - Ranged
-    - name: Immense Power
-      text: Your Stand is strong, but it can only perform the actions you tell it to do within a small range. Take your Power stat, then multiply it by 2. Any Points gained to your Standʼs Power Bonus are also multiplied by 2.
-      allowed:
-        - Remote
-    - name: Immense Range
-      text: Your Stand is powerful, but it is limited by how far your Stand can be away from you. From now on, you have a x10 modifier to your Range Stat. This also multiples any points gained to your Range Score by 10.
-      allowed:
-        - Remote
-        - Enhancement
-        - Revenge
-    - name: Immense Resistance
-      text: Your Stand is incredibly resilient, a reflection of your willpower and experience. For your Standʼs damage resistance, rather than using the normal Damage resistance formula, you may instead simply resist an amount of damage equal to your Durability Modifier + your Constitution Modifier (even if you are an Independent type Stand).
-      allowed:
-        - Independent
-        - Enhancement
-    - name: Oblivious Facade
-      text: Youʼve attempted to hide the fact that youʼre a Stand User before. You know what works, and what doesnʼt. When attempting to pass yourself off as a non-Stand User, you get Advantage on the Deception Check(s) used.
-      allowed:
-        - Independent
-        - Enhancement
-        - Remote
-        - Ranged
-        - Revenge
-    - name: Programmed Stand
-      text: 'Your Stand does not follow your command. Rather, you may set a simple program that your Stand must follow. Examples include: revent anybody from entering a specific building, use your ability on anyone who opens a door, attack anyone who steps into a shadow, etc...'
-      allowed:
-        - Remote
-    - name: Remote Grappler
-      text: Your Stand is now practiced in Grappling in order to engage in combat with somebody. Your Stand now gets Advantage when attempting to grapple a Stand, Object, or Stand User.
-      allowed:
-        - Remote
-    - name: Second Life
-      text: When you and your Stand Die, this Ability Activates. Your Body remains lifeless for anywhere from 1 minute, to 24 hours. At some point within this timeframe, your Stand reawakens, as an Independent Type Stand, complete with your Mental Capacity and Memories. You retain all of your Experience Points, but all of your Health, Feats, Proficiencies and Abilities are reset. This effectively means you may make a higher level character, so long as it retains the same Memories you had in your First Life.
-      allowed:
-        - Revenge
-    - name: Self-Repair
-      text: You, or your Stand, acts independently of everything else. It does not have a physical form outside of the form that it/you has/have taken. As such, it/you must find a way to protect itself/yourself and survive. As an Action, you may spend a Hit Die to heal, but you must spend 2 Hit Dice in order to get the result of one Hit Dice. If you do not have enough Hit Dice for that roll, you may not heal. Outside of Combat, every Minute that you stand perfectly still, you may heal an amount of Health equal to your Durability Modifier.
-      allowed:
-        - Independent
-    - name: Self-Acclimation
-      text: Youʼve spent so much time manipulating certain elements, that you gain immunity to one damage type, that relates to your Stand Type. An example of this would be Ghaccioʼs Cold Immunity. You also gain Immunity to that type of damage, even if it is caused by a Stand (Immunity to Piercing also extends to Stand Piercing Immunity). Pillar Men, and Undead of all kinds cannot choose Radiant as the damage type for which they are immune.
-      allowed:
-        - Ability
-    - name: Silent Movement
-      text: You have, through experience, gained better control of your Stand, allowing you to move your Stand extremely carefully, ensuring that the only way that your Stand may be detected is when it is seen. Its movement is silent. When your Stand moves in an attempt to evade detection, they may roll Stealth with Advantage.
-      allowed:
-        - Ranged
-        - Act
-    - name: Slippery
-      text: Your Stand has the ability to defend you, and let you escape from very dangerous situations with relative ease. When your Stand is within 2 Meters of you, you may Disengage or Hide as a Bonus Action.
-      allowed:
-        - Ranged
-        - Act
-        - Ability
-    - name: Special Abilities
-      text: These are powers that use the same concept of the regular Custom Ability, but taken to a whole new level. These abilities have immense strength, at twice the cost of a normal Ability (Usually twice the Stand Energy). When used, these abilities take a lot more Stand Energy than a regular ability. Special Abilities is usually 1 Bracket of Dice Stronger than the ability would be normally (d8 would become d10, d4 would become d6). They also take more time to perform, usually, but not always, taking a Full Action to perform. Examples of Special Abilities are The Worldʼs The World, King Crimsonʼs Time Deletion, or Weather Reportʼs Heavy Weather. A Special Ability might also be a passive ability that functions independently of activation. A Special Ability might also be a passive ability that may be activated or deactivated at will. Passive Abilities consume 2 Stand Energy at the Start of the Stand Userʼs Turn, and also take their Bonus Action to perform. If you are unable to use your Bonus Action, or you do not have enough Stand Energy remaining, the ability simply stops functioning.
-      allowed:
-        - any
-    - name: Speedy Movement
-      text: You have, through experience, built up the movement speed of your Stand. At any time, as a Reaction, you may call your Stand back to you, allowing it to come back and defend you, or perform any action requiring your Stand to be near you, up to its Movement Speed. This also means that your AC may be increased to your Standʼs AC if it is able to return to you. However, when your Stand returns to you, if it passes through the Melee Range of a Stand or Creature that can sense it, the Stand/Creature may make an Attack of Opportunity against your Stand.
-      allowed:
-        - Ranged
-        - Act
-    - name: Split Stand
-      text: Is a Hive Type Stand User, your Stand functions very differently than a typical Stand. Rather than a Stand being an extension of your Will To Fight, Each Instance of your Stand is like a separate organism, that simply must follow your orders. Each Instance of your Stand only has a fraction of the Power of a regular Stand. Not only that, but each Instance may act independently of the others or the Stand User. Not only that, but if one Instance is totally destroyed, that fraction of the Userʼs Health is taken away (If you have 12 Instances of your Stand, and one gets destroyed, take your total Health, then divide it by 12, and that is how much damage you take). If every Instance of your Stand is destroyed, you die instantly. If your health is restored, so are your Stand Instances. Even when you fall unconscious, you still have 1 Stand Instance. Only when you die is that Instance erased.
-      allowed:
-        - Hive
-    - name: Stand Pickpocketing
-      text: Through trial and error, youʼve gained the ability to slip objects from the grasp of other people using your Stand. From now on, when making Sleight of Hand checks using your Stand, you have Advantage.
-      allowed:
-        - Ability
-    - name: Two Modes
-      text: Interestingly, you have somehow gained power over your Stand, despite how incredibly volatile Remote Stands can be. At any time, as an Attack, you may switch to/from Ranged Mode. In Ranged Mode, Remote Stands may function as any other Stand does, in that they may be controlled by the userʼs will, and can follow specific commands. However, while in Ranged Mode, you may not use your Stand Ability, nor your Special Stand Ability. If your Stand has Stand Marking active, that also shuts off upon changing to Ranged Mode. Your Stand has the same stats regardless of the mode that they are in.
-      allowed:
-        - Remote
-    - name: Ultimate Stand Ability
-      text: This ability is something that very few Stands or Stand users are able to get to. Itʼs an ability that uses a lot of your Standʼs Energy, draining most of the energy of your Stand. This Ability costs 5 Stand Energy, and this SE cost cannot be reduced. An example of an Ultimate Stand Ability is White Albumʼs Gently Weeps.
-      allowed:
-        - Ability
-    - name: Unconscious Control
-      text: You and your Stand have different health pools. When your HP reaches 0, your Stand may continue to function, but NOT VICE VERSA. However, if either of them are killed, the other is killed as
-      allowed:
-        - Revenge
-stands: []
-Passions: []
+    dex: 0
+    itl: -1
+    str: 3
+    wis: 2
+skill_pro:
+    - level: 0
+      value: 0
+      stat_type: dex
+      skill_name: Acrobatics
+    - level: 0
+      value: 2
+      stat_type: wis
+      skill_name: AnimalHandling
+    - level: 0
+      value: -1
+      stat_type: int
+      skill_name: Arcana
+    - level: 0
+      value: 3
+      stat_type: str
+      skill_name: Athlete
+    - level: 0
+      value: 1
+      stat_type: cha
+      skill_name: Deception
+    - level: 0
+      value: -1
+      stat_type: int
+      skill_name: History
+    - level: 0
+      value: 2
+      stat_type: wis
+      skill_name: Insight
+    - level: 0
+      value: 1
+      stat_type: cha
+      skill_name: Intimidation
+    - level: 0
+      value: -1
+      stat_type: int
+      skill_name: Investigation
+    - level: 0
+      value: 2
+      stat_type: wis
+      skill_name: Medicine
+    - level: 0
+      value: -1
+      stat_type: int
+      skill_name: Nature
+    - level: 0
+      value: 2
+      stat_type: wis
+      skill_name: Perception
+    - level: 0
+      value: 1
+      stat_type: cha
+      skill_name: Performer
+    - level: 0
+      value: 1
+      stat_type: cha
+      skill_name: Persuasion
+    - level: 0
+      value: -1
+      stat_type: int
+      skill_name: Religion
+    - level: 0
+      value: 0
+      stat_type: dex
+      skill_name: SlightOfHand
+    - level: 0
+      value: 0
+      stat_type: dex
+      skill_name: Stealth
+    - level: 0
+      value: 2
+      stat_type: wis
+      skill_name: Survival
+character_details:
+    description: ""
+    backstory: ""
+    relations: ""
+    inventory: ""
+    languages: ""
+    Weapons: ""
+    image_path: ""
+    flaws: ""
+    ideals: ""
+    personality: ""
+    age: ""
+    height: ""
+    weight: ""
+    skin_tone: ""
+    eye_color: ""
+    hair_color: ""
+    attack_description: ""
+    extra_info: ""

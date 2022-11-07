@@ -604,6 +604,8 @@ func generate_character_statistics(character_sheet *Character_Sheet, recalc_star
 	character_sheet.Stand_damage_reduction = character_sheet.Stand_ability_scores["dur"] / 10
 	character_sheet.Initiative = character_sheet.Char_ability_modifiers["dex"] + character_sheet.Char_ability_modifiers["wis"]
 	character_sheet.Stand_dc = 8 + character_sheet.Proficiency_bonus + character_sheet.Char_ability_modifiers["cha"]
+	character_sheet.Movement = character_sheet.Char_ability_modifiers["dex"]*5 + 25
+	character_sheet.Passive_perception = character_sheet.Skill_pro[12].Value + 10
 
 	if recalc_starters == true {
 		// Calculate starting hit points
@@ -647,5 +649,6 @@ func GenerateRandomCharacter(level int) {
 		level_up_random(&character_sheet)
 	}
 
-	ExportCharacterToYaml(character_sheet)
+	cse := ConvertCharacterSheetForExport(character_sheet)
+	ExportCharacterToYaml(cse)
 }
