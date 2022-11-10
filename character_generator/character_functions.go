@@ -92,7 +92,6 @@ func GetNameArrayStands(data []Stand) []string {
 
 	return ret
 }
-
 func GetNameArrayAbilities(data []Abilities) []string {
 	ret := []string{}
 	for i := 0; i < len(data); i++ {

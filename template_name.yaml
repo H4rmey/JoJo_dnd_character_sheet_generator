@@ -1,30 +1,28 @@
 name: template name
-passion: Student
+passion: Trained Laborer
 stand_type: Ability
-hit_points: 22
-level: 5
+hit_points: 14
+level: 2
 hit_dice: 1d6
-movement: 25
-proficiency_bonus: 3
-armor_class: 14
-initiative: 2
-passive_perception: 11
+movement: 40
+proficiency_bonus: 2
+armor_class: 16
+initiative: 1
+passive_perception: 12
 feats_list:
-    - Tavern Brawler
+    - Catlike Agility
     - Heart of Truth
-    - ""
 abilities_list:
     - Slippery
     - Self-Acclimation
-    - Detached_Senses
 stand:
     name: Ability
-    ability_dice: 3d12
+    ability_dice: 1d4
     damage_reduction: 1
-    movement: 10
-    attack_per_turn: 2
+    movement: 4
+    attack_per_turn: 1
     stand_dc: 12
-    stand_ac: 18
+    stand_ac: 17
     attack_dice: 1d4
     attack_dice_higher_level: ""
     attack_dice_past_level_eleven: 1d6
@@ -33,135 +31,135 @@ stand:
     description: 'Many Stands are able to physically manifest themselves clearly and powerfully, but most Ability-Type Stands do not function in the same way. Some Ability Stands are not visible or tangible unless specifically made so by their user. While these Stands have very little in the way of physical power, their masterful use of their Abilities are able to make them more than handy in the fight. '
     note: ""
     ability_scores:
-        dur: 15
-        ngy: 60
-        pow: 17
-        pre: 33
-        ran: 44
-        spe: 63
+        dur: 16
+        ngy: 75
+        pow: 13
+        pre: 52
+        ran: 48
+        spe: 26
     ability_modifiers:
         dur: 1
-        ngy: 6
+        ngy: 7
         pow: 1
-        pre: 3
+        pre: 5
         ran: 4
-        spe: 6
+        spe: 2
 saving_throws:
     cha:
-        level: 1
-        value: 1
+        level: 0
+        value: 2
         stat_type: cha
         skill_name: ""
     con:
         level: 0
-        value: 2
+        value: 3
         stat_type: con
         skill_name: ""
     dex:
         level: 0
-        value: 0
+        value: 3
         stat_type: dex
         skill_name: ""
     itl:
         level: 1
-        value: -1
+        value: 1
         stat_type: itl
         skill_name: ""
     str:
-        level: 0
-        value: 3
+        level: 1
+        value: 0
         stat_type: str
         skill_name: ""
     wis:
         level: 0
-        value: 2
+        value: -2
         stat_type: wis
         skill_name: ""
 char_ability_scores:
-    cha: 12
-    con: 14
-    dex: 11
-    itl: 8
-    str: 17
-    wis: 15
+    cha: 15
+    con: 16
+    dex: 17
+    itl: 12
+    str: 11
+    wis: 7
 char_ability_modifiers:
-    cha: 1
-    con: 2
-    dex: 0
-    itl: -1
-    str: 3
-    wis: 2
+    cha: 2
+    con: 3
+    dex: 3
+    itl: 1
+    str: 0
+    wis: -2
 skill_pro:
     - level: 0
-      value: 0
+      value: 3
       stat_type: dex
       skill_name: Acrobatics
     - level: 0
-      value: 2
+      value: -2
       stat_type: wis
       skill_name: AnimalHandling
-    - level: 0
-      value: -1
+    - level: 1
+      value: 3
       stat_type: int
       skill_name: Arcana
     - level: 0
-      value: 3
+      value: 0
       stat_type: str
       skill_name: Athlete
     - level: 0
-      value: 1
+      value: 2
       stat_type: cha
       skill_name: Deception
     - level: 0
-      value: -1
+      value: 1
       stat_type: int
       skill_name: History
     - level: 0
-      value: 2
+      value: -2
       stat_type: wis
       skill_name: Insight
     - level: 0
-      value: 1
+      value: 2
       stat_type: cha
       skill_name: Intimidation
-    - level: 0
-      value: -1
+    - level: 1
+      value: 3
       stat_type: int
       skill_name: Investigation
     - level: 0
-      value: 2
+      value: -2
       stat_type: wis
       skill_name: Medicine
     - level: 0
-      value: -1
+      value: 1
       stat_type: int
       skill_name: Nature
     - level: 0
-      value: 2
+      value: -2
       stat_type: wis
       skill_name: Perception
     - level: 0
-      value: 1
+      value: 2
       stat_type: cha
       skill_name: Performer
     - level: 0
-      value: 1
+      value: 2
       stat_type: cha
       skill_name: Persuasion
     - level: 0
-      value: -1
+      value: 1
       stat_type: int
       skill_name: Religion
     - level: 0
-      value: 0
+      value: 3
       stat_type: dex
       skill_name: SlightOfHand
     - level: 0
-      value: 0
+      value: 3
       stat_type: dex
       skill_name: Stealth
     - level: 0
-      value: 2
+      value: -2
       stat_type: wis
       skill_name: Survival
 character_details:
