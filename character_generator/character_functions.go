@@ -257,6 +257,37 @@ func generate_passion_ability_score(passion Passion, ability_scores map[string]i
 	return cas
 }
 
+func GenerateAllExtraModifiersAndStats(cs *Character_Sheet, recalc_starters bool) {
+	fmt.Printf("============= Generate Character Sheet ================\n")
+	// Calculate generate ability modifiers again :)
+	cs.Char_ability_modifiers = generate_ability_modifiers_character(cs.Char_ability_scores)
+	cs.Saving_throws = generate_passion_saving_throws(cs.Passion, cs.Char_ability_modifiers, cs.Proficiency_bonus)
+
+	//generate_character_skill_proficiencies()
+	cs.Skill_pro = generate_passion_proficiencies(cs.Passion, cs.Char_ability_modifiers, cs.Proficiency_bonus)
+
+	// Calculate stand ability scores
+	cs.Stand_ability_scores = generate_ability_scores_stands(cs.Stand, cs.Char_ability_scores)
+	// Calculate stand ability modifiers
+	cs.Stand_ability_modifiers = generate_ability_modifiers_stand(cs.Stand_ability_scores)
+
+	// Calculate some small things like AC
+	cs.Armor_class = calculate_char_AC(cs.Char_ability_modifiers)
+	cs.Stand_ac = calculate_stand_AC(cs.Stand_ability_modifiers)
+	cs.Stand_movement = cs.Stand_ability_modifiers["spe"] * 2
+	cs.Stand_attack_per_turn = cs.Stand_ability_scores["spe"]/50 + 1
+	cs.Stand_damage_reduction = cs.Stand_ability_scores["dur"] / 10
+	cs.Initiative = cs.Char_ability_modifiers["dex"] + cs.Char_ability_modifiers["wis"]
+	cs.Stand_dc = 8 + cs.Proficiency_bonus + cs.Char_ability_modifiers["cha"]
+	cs.Movement = cs.Char_ability_modifiers["dex"]*5 + 25
+	cs.Passive_perception = cs.Skill_pro[12].Value + 10
+
+	if recalc_starters == true {
+		// Calculate starting hit points
+		cs.Hit_points = 10 + cs.Char_ability_modifiers["con"]
+	}
+}
+
 func PrintCharacterSheet(character_sheet Character_Sheet) {
 	fmt.Printf("============= Character Sheet Level: %d ================\n", character_sheet.Level)
 	for i := 0; i < len(character_sheet.Skill_pro); i++ {
