@@ -124,22 +124,25 @@ type Character_Sheet struct {
 }
 
 type Export_Character_Details struct {
+	// Base
+	Name      string `yaml:"name"`
+	Languages string `yaml:"languages"`
+	Age       string `yaml:"age"`
+	Height    string `yaml:"height"`
+	Weight    string `yaml:"weight"`
+	SkinTone  string `yaml:"skin_tone"`
+	EyeColor  string `yaml:"eye_color"`
+	HairColor string `yaml:"hair_color"`
+	// Details
 	Description       string `yaml:"description"`
 	Backstory         string `yaml:"backstory"`
 	Relations         string `yaml:"relations"`
 	Inventory         string `yaml:"inventory"`
-	Languages         string `yaml:"languages"`
 	Weapons           string `yaml:"Weapons"`
 	Image             string `yaml:"image_path"`
 	Flaws             string `yaml:"flaws"`
 	Ideals            string `yaml:"ideals"`
 	Personality       string `yaml:"personality"`
-	Age               string `yaml:"age"`
-	Height            string `yaml:"height"`
-	Weight            string `yaml:"weight"`
-	SkinTone          string `yaml:"skin_tone"`
-	EyeColor          string `yaml:"eye_color"`
-	HairColor         string `yaml:"hair_color"`
 	AttackDescription string `yaml:"attack_description"`
 	ExtraInfo         string `yaml:"extra_info"`
 }
