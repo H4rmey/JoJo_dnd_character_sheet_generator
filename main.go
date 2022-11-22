@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	//level := 2
-	//	cg.GenerateRandomCharacter(level)
-	cg.StartBuildingCharacter()
+	level := 5
+	cg.GenerateRandomCharacter(level)
+	//cg.StartBuildingCharacter()
 }

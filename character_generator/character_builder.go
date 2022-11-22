@@ -77,7 +77,7 @@ func SetAbilityModifiers(cs *Character_Sheet) tview.Primitive {
 	return grid
 }
 
-func PageCreateStand(ecs *Export_Character_Sheet) *tview.Grid {
+func PageCreateStand(ecs *Export_Character_Sheet, app *tview.Application) *tview.Grid {
 	// gridStandScores := tview.NewGrid()
 	// gridStandStats := tview.NewGrid()
 	// gridAbilityScores := tview.NewGrid()
@@ -184,7 +184,7 @@ func StartBuildingCharacter() {
 		pageIndex: 0,
 	}
 	cb.Init()
-	cb.grid = PageCreateStand(&ecs)
+	cb.grid = PageCreateStand(&ecs, app)
 
 	//pickPassion := PickStand(&cs)
 	//pickStand := PickPassion(&cs)

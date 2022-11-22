@@ -1,49 +1,52 @@
 name: template name
-passion: Trained Laborer
-stand_type: Ability
-hit_points: 14
-level: 2
-hit_dice: 1d6
-movement: 40
-proficiency_bonus: 2
-armor_class: 16
-initiative: 1
+passion: Physician
+stand_type: Revenge
+hit_points: 30
+level: 5
+hit_dice: 1d12
+movement: 30
+proficiency_bonus: 3
+armor_class: 13
+initiative: 3
 passive_perception: 12
 feats_list:
-    - Catlike Agility
-    - Heart of Truth
+    - Quick on your Feet
+    - Tavern Brawler
+    - ""
 abilities_list:
-    - Slippery
-    - Self-Acclimation
+    - Detached_Senses
+    - Feat_of_Power
+    - Stand_Marking
+    - Oblivious_Facade
 stand:
-    name: Ability
-    ability_dice: 1d4
-    damage_reduction: 1
-    movement: 4
+    name: Revenge
+    ability_dice: 3d10
+    damage_reduction: 3
+    movement: 8
     attack_per_turn: 1
-    stand_dc: 12
-    stand_ac: 17
-    attack_dice: 1d4
+    stand_dc: 13
+    stand_ac: 19
+    attack_dice: 1d12
     attack_dice_higher_level: ""
-    attack_dice_past_level_eleven: 1d6
-    hit_dice: 1d6
-    on_level_up: 2d4
-    description: 'Many Stands are able to physically manifest themselves clearly and powerfully, but most Ability-Type Stands do not function in the same way. Some Ability Stands are not visible or tangible unless specifically made so by their user. While these Stands have very little in the way of physical power, their masterful use of their Abilities are able to make them more than handy in the fight. '
-    note: ""
+    attack_dice_past_level_eleven: 2d10
+    hit_dice: 1d12
+    on_level_up: 3d4
+    description: Some Stands have immense power but are unable to properly function unless their user feels a certain way. Through feelings of hatred, pain, or loss, certain Stands may manifest properly, showing their true form and relentlessly attacking those who wronged their users.
+    note: 'Note: You cannot activate a Revenge-Type Stand by yourself. Instead, you must take an amount of damage greater than or equal to your Level in order to summon your Stand. This damage may be dealt over time, or in one hit. After you take that initial damage, you can summon it or dispell it at will for an amount of minutes equal to your Level. The damage can be inflicted by yourself or something that another person/thing does to you.'
     ability_scores:
-        dur: 16
-        ngy: 75
-        pow: 13
+        dur: 35
+        ngy: 30
+        pow: 56
         pre: 52
-        ran: 48
-        spe: 26
+        ran: 123
+        spe: 43
     ability_modifiers:
-        dur: 1
-        ngy: 7
-        pow: 1
+        dur: 3
+        ngy: 3
+        pow: 5
         pre: 5
-        ran: 4
-        spe: 2
+        ran: 12
+        spe: 4
 saving_throws:
     cha:
         level: 0
@@ -52,58 +55,58 @@ saving_throws:
         skill_name: ""
     con:
         level: 0
-        value: 3
+        value: -2
         stat_type: con
         skill_name: ""
     dex:
         level: 0
-        value: 3
+        value: 1
         stat_type: dex
         skill_name: ""
     itl:
         level: 1
-        value: 1
+        value: 3
         stat_type: itl
         skill_name: ""
     str:
-        level: 1
-        value: 0
+        level: 0
+        value: 3
         stat_type: str
         skill_name: ""
     wis:
-        level: 0
-        value: -2
+        level: 1
+        value: 2
         stat_type: wis
         skill_name: ""
 char_ability_scores:
     cha: 15
-    con: 16
-    dex: 17
-    itl: 12
-    str: 11
-    wis: 7
+    con: 6
+    dex: 12
+    itl: 17
+    str: 16
+    wis: 14
 char_ability_modifiers:
     cha: 2
-    con: 3
-    dex: 3
-    itl: 1
-    str: 0
-    wis: -2
+    con: -2
+    dex: 1
+    itl: 3
+    str: 3
+    wis: 2
 skill_pro:
     - level: 0
-      value: 3
+      value: 1
       stat_type: dex
       skill_name: Acrobatics
-    - level: 0
-      value: -2
+    - level: 1
+      value: 5
       stat_type: wis
       skill_name: AnimalHandling
-    - level: 1
+    - level: 0
       value: 3
       stat_type: int
       skill_name: Arcana
     - level: 0
-      value: 0
+      value: 3
       stat_type: str
       skill_name: Athlete
     - level: 0
@@ -111,31 +114,31 @@ skill_pro:
       stat_type: cha
       skill_name: Deception
     - level: 0
-      value: 1
+      value: 3
       stat_type: int
       skill_name: History
     - level: 0
-      value: -2
+      value: 2
       stat_type: wis
       skill_name: Insight
     - level: 0
       value: 2
       stat_type: cha
       skill_name: Intimidation
-    - level: 1
+    - level: 0
       value: 3
       stat_type: int
       skill_name: Investigation
     - level: 0
-      value: -2
+      value: 2
       stat_type: wis
       skill_name: Medicine
     - level: 0
-      value: 1
+      value: 3
       stat_type: int
       skill_name: Nature
     - level: 0
-      value: -2
+      value: 2
       stat_type: wis
       skill_name: Perception
     - level: 0
@@ -147,37 +150,38 @@ skill_pro:
       stat_type: cha
       skill_name: Persuasion
     - level: 0
-      value: 1
+      value: 3
       stat_type: int
       skill_name: Religion
     - level: 0
-      value: 3
+      value: 1
       stat_type: dex
       skill_name: SlightOfHand
     - level: 0
-      value: 3
+      value: 1
       stat_type: dex
       skill_name: Stealth
     - level: 0
-      value: -2
+      value: 2
       stat_type: wis
       skill_name: Survival
 character_details:
-    description: ""
-    backstory: ""
-    relations: ""
-    inventory: ""
+    name: ""
     languages: ""
-    Weapons: ""
-    image_path: ""
-    flaws: ""
-    ideals: ""
-    personality: ""
     age: ""
     height: ""
     weight: ""
     skin_tone: ""
     eye_color: ""
     hair_color: ""
+    description: ""
+    backstory: ""
+    relations: ""
+    inventory: ""
+    Weapons: ""
+    image_path: ""
+    flaws: ""
+    ideals: ""
+    personality: ""
     attack_description: ""
     extra_info: ""
